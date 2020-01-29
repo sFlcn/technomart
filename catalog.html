@@ -47,35 +47,37 @@
     <main>
       <h1>ПЕРФОРАТОРЫ</h1>
       <ul class="breadcrumb">
-        <li><a href="/index.html">Главная</a></li>
-        <li><a href="/catalog.html">Каталог</a></li>
-        <li><a href="#">Инструмент</a></li>
-        <li>Перфораторы</li>
+        <li class="breadcrumbs__item"><a href="/index.html">Главная</a></li>
+        <li class="breadcrumbs__item"><a href="/catalog.html">Каталог</a></li>
+        <li class="breadcrumbs__item"><a href="#">Инструмент</a></li>
+        <li class="breadcrumbs__item">Перфораторы</li>
       </ul>
 
-      <section>
+      <section class="filters">
         <h2>ФИЛЬТР:</h2>
         <!-- фильтр по цене -->
         <p>ПРОИЗВОДИТЕЛИ:</p>
-        <ul>
-          <li>BOSCH</li>
-          <li>ИНТЕРСКОЛ</li>
-          <li>MAKIta</li>
-          <li>Dewalt</li>
-          <li>Hitachi</li>
+        <ul class="manufacturers-list">
+          <li class="manufacturers-list__item">BOSCH</li>
+          <li class="manufacturers-list__item">ИНТЕРСКОЛ</li>
+          <li class="manufacturers-list__item">MAKIta</li>
+          <li class="manufacturers-list__item">Dewalt</li>
+          <li class="manufacturers-list__item">Hitachi</li>
         </ul>
         <p>ПИТАНИЕ:</p>
-        <ul>
-          <li>Аккумуляторные</li>
-          <li>Сетевые</li>
+        <ul class="power-type">
+          <li class="power-type__item">Аккумуляторные</li>
+          <li class="power-type__item">Сетевые</li>
         </ul>
         <button type="button">ПОКАЗАТЬ</button>
       </section>
+      <section  class="sorting-filter">
       <!-- СОРТИРОВКА -->
-      <section>
+      </section>
+      <section class="product-list">
         <h2>Список товаров</h2>
         <ul>
-          <li>
+          <li class="product-list__item">
             <h3>
               <a href="#">
                 <span>Перфоратор BOSCH</span>
@@ -88,7 +90,7 @@
             <p>22500 Р.</p>
             <a href="#">15500 Р.</a>
           </li>
-          <li>
+          <li class="product-list__item">
             <h3>
               <a href="#">
                 <span>Перфоратор BOSCH</span>
@@ -101,7 +103,7 @@
             <p>30500 Р.</p>
             <a href="#">25500 Р.</a>
           </li>
-          <li>
+          <li class="product-list__item new-product">
             <h3>
               <a href="#">
                 <span>Перфоратор BOSCH</span>
@@ -109,13 +111,13 @@
               </a>
             </h3>
             <ul>
-              <li><button type="button" name="item-buy">КУПИТЬ</button></li>
-              <li><button type="button" name="item-bookmark">В закладки</button></li>
+              <li><button class="catalog-button buy" type="button" name="item-buy">КУПИТЬ</button></li>
+              <li><button class="catalog-button bookmark"type="button" name="item-bookmark">В закладки</button></li>
             </ul>
             <p></p>
             <a href="#">12500 Р.</a>
           </li>
-          <li>
+          <li class="product-list__item">
             <h3>
               <a href="#">
                 <span>Перфоратор BOSCH</span>
@@ -128,7 +130,7 @@
             <p>22500 Р.</p>
             <a href="#">15500 Р.</a>
           </li>
-          <li>
+          <li class="product-list__item new-product">
             <h3>
               <a href="#">
                 <span>Перфоратор BOSCH</span>
@@ -141,7 +143,7 @@
             <p>30500 Р.</p>
             <a href="#">25500 Р.</a>
           </li>
-          <li>
+          <li class="product-list__item">
             <h3>
               <a href="#">
                 <span>Перфоратор BOSCH</span>
@@ -154,7 +156,7 @@
             <p></p>
             <a href="#">12500 Р.</a>
           </li>
-          <li>
+          <li class="product-list__item new-product">
             <h3>
               <a href="#">
                 <span>Перфоратор BOSCH</span>
@@ -167,7 +169,7 @@
             <p>22500 Р.</p>
             <a href="#">15500 Р.</a>
           </li>
-          <li>
+          <li class="product-list__item">
             <h3>
               <a href="#">
                 <span>Перфоратор BOSCH</span>
@@ -180,7 +182,7 @@
             <p>30500 Р.</p>
             <a href="#">25500 Р.</a>
           </li>
-          <li>
+          <li class="product-list__item">
             <h3>
               <a href="#">
                 <span>Перфоратор BOSCH</span>
@@ -194,6 +196,12 @@
             <a href="#">12500 Р.</a>
           </li>
         </ul>
+      </section>
+
+      <!-- пагинация -->
+
+      <section class="about-product">
+        <!-- о перфораторах -->
       </section>
     </main>
 
