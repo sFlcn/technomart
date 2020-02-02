@@ -59,7 +59,18 @@
 
       <section class="filters">
         <h2 class="filters__title">ФИЛЬТР:</h2>
-        <!-- фильтр по цене -->
+        <div class="filters__price price-filter">
+          <h3 class="price-filter__title">ЦЕНА:</h3>
+          <div class="filters__range-slider">
+            <div class="filters__range-slider-track"> <!-- двойной слайдер -->
+              <div class="filters__range-slider-pin range-slider-pin-min"></div>
+              <div class="filters__range-slider-pin range-slider-pin-max"></div>
+            </div>
+            <input type="number" value="0" name="min">
+            <span>—</span>
+            <input type="number" value="3000" name="max">
+          </div>
+        </div>
         <div class="filters__manufacturers manufacturers">
           <p class="manufacturers__title">>ПРОИЗВОДИТЕЛИ:</p>
           <ul class="manufacturers__list">
@@ -80,7 +91,16 @@
         <button class="filters__button" type="button">ПОКАЗАТЬ</button>
       </section>
       <section  class="sorting">
-      <!-- СОРТИРОВКА -->
+        <h2 class="sorting__title">СОРТИРОВКА:</h2>
+        <ul class="sorting__list">
+          <li class="sorting__item sorting__item--current"><a href="#">ПО ЦЕНЕ</a></li>
+          <li class="sorting__item"><a href="#">ПО ТИПУ</a></li>
+          <li class="sorting__item"><a href="#">ПО ФУНКЦИОНАЛУ</a></li>
+        </ul>
+        <ul class="sorting__method">
+          <li class="sorting__ascending"><a href="#">△</a></li>
+          <li class="sorting__decending"><a href="#">▽</a></li>
+        </ul>
       </section>
       <section class="products">
         <h2 class="products__title visuallyhidden">Список товаров</h2>
@@ -206,10 +226,21 @@
         </ul>
       </section>
 
-      <!-- пагинация -->
+      <ul class="pagination__list">
+        <li class="pagination__item pagination__item--previous"><a href="#">ПРЕДЫДУЩАЯ</a></li>
+        <li class="pagination__item pagination__item--current">1</li>
+        <li class="pagination__item"><a href="#">2</a></li>
+        <li class="pagination__item"><a href="#">3</a></li>
+        <li class="pagination__item pagination__item--next"><a href="#">СЛЕДУЮЩАЯ</a></li>
+      </ul>
 
       <section class="about-product">
-        <!-- о перфораторах -->
+        <h2 class="about-product__title">ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
+        <p class="about-product__text">
+          Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
+          Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. <br>
+          В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+        </p>
       </section>
     </main>
 
