@@ -1,0 +1,222 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Cuprum', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: none;
+
+  background-color: #ffffff;
+}
+
+.button {
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  background-color: #ee3643;
+}
+
+.button:hover,
+.button:focus {
+  color: #ffffff;
+  background-color: #ca2c37;
+}
+.button:active {
+  background-color: #ba2732;
+}
+
+/* header */
+
+.header {
+  background-color: #f3f7f8;
+}
+
+.header__top {
+  font-size: 17px;
+  line-height: 28px;
+  color: #ffffff;
+
+  background-color: #293449;
+}
+
+.header__logo {
+  background-color: #ee3643;
+}
+
+.header__logo:hover,
+.header__logo:focus {
+  background-color: #ca2c37;
+}
+.header__logo:active {
+  background-color: #ba2732;
+}
+
+.header__search input {
+  font-family: 'Cuprum', Arial, sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+
+  background-color: transparent;
+  border: none;
+}
+
+.header__search input:hover {
+  background-color: #212a3a;
+}
+.header__search input:focus,
+.header__search input:active {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.header__search input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #ffffff;
+}
+.header__search input::-ms-input-placeholder { /* Microsoft Edge */
+  color: #ffffff;
+}
+.header__search input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #ffffff;
+  opacity: 1; /* Firefox */
+}
+
+.header__buttons a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header__buttons:hover,
+.header__buttons:focus {
+  background-color:   #212a3a;
+}
+.header__buttons:active{
+  color: rgba(255, 255, 255, 0.6);
+  background-color:   #161d29;
+}
+
+.header__buttons--green {
+  background-color: #63a63e;
+}
+
+.header__buttons--green:hover,
+.header__buttons--green:focus {
+  background-color:   #5fbb2d;
+}
+.header__buttons--green:active {
+  color: rgba(255, 255, 255, 0.5);
+  background-color:   #518534;
+}
+
+.header__info {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 23px;
+  font-style: italic;
+  color: #ee3643;
+}
+
+.header__contacts .header__tel {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 21px;
+  line-height: 21px;
+  color: #ee3643;
+  text-decoration: none;
+
+  border: 3px solid #ffffff;
+}
+
+.header__contacts p {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: #32425c;
+}
+
+.login__list {
+  list-style: none;
+}
+
+.login__item a {
+  font-family: 'Cuprum', Arial, sans-serif;
+  color: inherit;
+  text-decoration: none;
+}
+
+.login__enter,
+.login__registration,
+.login__user-name {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+
+  background-color: #ffffff;
+}
+
+/* .login__user-name:hover,.login__user-name:focus {} */
+
+.login__enter:hover,
+.login__registration:hover,
+.login__enter:focus,
+.login__registration:focus {
+  color: rgba(238, 54, 67, 1);
+}
+.login__enter:active,
+.login__registration:active,
+.login__user-name:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.login__user-orders,
+.login__user-profile {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-decoration: underline;
+  color: rgba(50, 66, 92, 1);
+}
+
+.login__user-orders:hover,
+.login__user-profile:hover,
+.login__user-orders:focus,
+.login__user-profile:focus {
+  color: rgba(238, 54, 67, 1);
+}
+.login__user-orders:active,
+.login__user-profile:active {
+  color: rgba(50, 66, 92, 0.3);
+}
+
+.site-nav {
+  font-size: 17px;
+  line-height: 17px;
+  color: #ffffff;
+
+  background-color: #32425c;
+}
+
+.site-nav ul {
+  list-style: none;
+}
+
+.site-nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-nav__item:hover,
+.site-nav__item:focus {
+  background-color: #293449;
+}
+.site-nav__item:active {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: #1d2739;
+}
