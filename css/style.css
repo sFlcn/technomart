@@ -12,7 +12,7 @@ body {
   background-color: #ffffff;
 }
 
-.button {
+.red-button {
   font-size: 14px;
   line-height: 18px;
   color: #ffffff;
@@ -22,12 +22,12 @@ body {
   background-color: #ee3643;
 }
 
-.button:hover,
-.button:focus {
+.red-button:hover,
+.red-button:focus {
   color: #ffffff;
   background-color: #ca2c37;
 }
-.button:active {
+.red-button:active {
   background-color: #ba2732;
 }
 
@@ -165,8 +165,6 @@ body {
   background-color: #ffffff;
 }
 
-/* .login__user-name:hover,.login__user-name:focus {} */
-
 .login__enter:hover,
 .login__registration:hover,
 .login__enter:focus,
@@ -228,6 +226,43 @@ body {
 /* main */
 
 
+.section-title {
+  font-family: 'Cuprum', Arial, sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.service__title,
+.about-us__title,
+.contacts__title {
+  color: #000000;
+}
+
+.section-text {
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.transport__list {
+  list-style: none;
+}
+
+.transport__item {
+  font-family: 'Cuprum', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #000000;
+  text-decoration: none;
+}
+
+.contacts__map {
+  background-color: #f4f2ed;
+}
 
 /* footer */
 
@@ -313,3 +348,5 @@ body {
   text-decoration: none;
   color: #ee3643;
 }
+
+/* popups */
