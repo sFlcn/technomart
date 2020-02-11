@@ -31,6 +31,22 @@ body {
   background-color: #ba2732;
 }
 
+.header__logo,
+.footer__logo {
+  background-color: #ee3643;
+}
+
+.header__logo:hover,
+.header__logo:focus,
+.footer__logo:hover,
+.footer__logo:focus {
+  background-color: #ca2c37;
+}
+.header__logo:active,
+.footer__logo:active {
+  background-color: #ba2732;
+}
+
 /* header */
 
 .header {
@@ -43,18 +59,6 @@ body {
   color: #ffffff;
 
   background-color: #293449;
-}
-
-.header__logo {
-  background-color: #ee3643;
-}
-
-.header__logo:hover,
-.header__logo:focus {
-  background-color: #ca2c37;
-}
-.header__logo:active {
-  background-color: #ba2732;
 }
 
 .header__search input {
@@ -219,4 +223,93 @@ body {
 .site-nav__item:active {
   color: rgba(255, 255, 255, 0.5);
   background-color: #1d2739;
+}
+
+/* main */
+
+
+
+/* footer */
+
+.footer__top {
+  font-family: 'Cuprum', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #f3f7f9;
+
+  background-color: #32425c;
+}
+
+.footer__bottom {
+  font-family: 'Cuprum', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+
+  background-color: #293449;
+}
+
+.footer-nav {
+  font-size: 18px;
+  line-height: 24px;
+  color: #f1f5f7;
+}
+
+.footer-nav__list {
+  list-style: none;
+}
+
+.footer-nav__item a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-nav__item--highlight {
+  color: #ffd180;
+}
+
+.footer-nav__item:hover,
+.footer-nav__item:focus {
+  text-decoration: underline;
+}
+
+.footer-nav__item:active {
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+.socials {
+  text-align: center;
+}
+
+.socials__list {
+  list-style: none;
+}
+
+.socials__item {
+  color: #ffffff;
+  background-color: #212a3a;
+  text-decoration: none;
+}
+
+.socials__item:hover,
+.socials__item:focus,
+.socials__item:active {
+  background-color: #ee3643;
+}
+
+.feedback__link {
+  text-decoration: none;
+  color: #ffd180;
+}
+
+.feedback__link:hover,
+.feedback__link:focus {
+  text-decoration: underline;
+}
+.feedback__link:active {
+  text-decoration: none;
+  color: #ee3643;
 }
