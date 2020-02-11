@@ -119,6 +119,19 @@ body {
   background-color:   #518534;
 }
 
+.header__buttons--red {
+  background-color: #ee3643;
+}
+
+.header__buttons--red:hover,
+.header__buttons--red:focus {
+  background-color:   #ca2c37;
+}
+.header__buttons--red:active {
+  color: rgba(255, 255, 255, 0.5);
+  background-color:   #ba2732;
+}
+
 .header__info {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 16px;
