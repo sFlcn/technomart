@@ -238,7 +238,22 @@ body {
 
 /* main */
 
+.breadcrumb {
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: uppercase;
 
+  list-style: none;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+}
+
+.main__title,
 .section-title {
   font-family: 'Cuprum', Arial, sans-serif;
   font-size: 30px;
@@ -250,6 +265,11 @@ body {
 .about-us__title,
 .contacts__title {
   color: #000000;
+}
+
+.popular-products__title,
+.popular-manufacturers__title {
+  color: #32425c;
 }
 
 .section-text {
@@ -264,7 +284,7 @@ body {
   list-style: none;
 }
 
-.transport__item {
+.transport__item a {
   font-family: 'Cuprum', Arial, sans-serif;
   font-size: 18px;
   line-height: 20px;
@@ -275,6 +295,14 @@ body {
 
 .contacts__map {
   background-color: #f4f2ed;
+}
+
+.filters__title {
+  font-family: 'Cuprum', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #000000;
 }
 
 /* footer */
