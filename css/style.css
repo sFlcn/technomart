@@ -12,22 +12,29 @@ body {
   background-color: #ffffff;
 }
 
-.big-red-button {
+.big-button {
   font-size: 14px;
   line-height: 18px;
-  color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
+}
 
+.big-button--white {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.big-button--red {
+  color: #ffffff;
   background-color: #ee3643;
 }
 
-.big-red-button:hover,
-.big-red-button:focus {
+.big-button--red:hover,
+.big-button--red:focus {
   color: #ffffff;
   background-color: #ca2c37;
 }
-.big-red-button:active {
+.big-button--red:active {
   background-color: #ba2732;
 }
 

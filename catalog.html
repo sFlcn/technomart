@@ -332,15 +332,14 @@
       </div>
     </footer>
 
-    <section class="cart-popup">
-      <h2 class="cart-popup__title">Товар добавлен в корзину!</h2>
-      <div class="cart-popup__buttons buttons-cart">
-        <ul class="buttons-cart__list">
-          <li class="buttons-cart__item"><a href="#">Оформить Заказ</a></li>
-          <li class="buttons-cart__item"><a href="./catalog.html">Продолжить Покупки</a></li>
-        </ul>
-        <button class="cart-popup__submit" type="button" name="cart-popup__window-close">Закрыть</button>
-      </div>
+    <section class="popup popup--cart">
+      <h2 class="popup__title visuallyhidden">Корзина</h2>
+      <button class="popup-close" type="button" name="cart-popup__close">Закрыть</button>
+      <p class="popup__info">Товар добавлен в корзину!</p>
+      <ul class="popup-buttons__list">
+        <li class="popup-buttons__item"><a class="big-button big-button--red" href="#">Оформить Заказ</a></li>
+        <li class="popup-buttons__item"><a class="big-button big-button--white" href="./catalog.html">Продолжить Покупки</a></li>
+      </ul>
     </section>
 
     <!-- <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p> -->
