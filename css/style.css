@@ -306,6 +306,7 @@ body {
   line-height: 18px;
   font-weight: 400;
   color: #000000;
+  text-transform: uppercase;
 }
 
 .filters fieldset {
@@ -318,6 +319,7 @@ body {
   line-height: 30px;
   font-weight: 800;
   color: #000000;
+  text-transform: uppercase;
 }
 
 .filters__list,
@@ -338,6 +340,7 @@ body {
   line-height: 20px;
   font-weight: 400;
   color: #000000;
+  text-transform: uppercase;
 }
 
 .manufacturers-filter input:disabled + label,
