@@ -75,57 +75,65 @@
       <section class="filters">
         <h2 class="filters__title">Фильтр:</h2>
         <form class="filters__form" action="https://echo.htmlacademy.ru" method="get">
-          <fieldset class="filters__price price-filter">
-            <legend class="price-filter__title">Цена:</legend>
-            <div class="price-filter__range-slider">
-              <div class="price-filter__range-slider-track"> <!-- двойной слайдер -->
-                <div class="price-filter__range-slider-pin range-slider-pin-min"></div>
-                <div class="price-filter__range-slider-pin range-slider-pin-max"></div>
+          <ul class="filters__list">
+            <li class="filters__item filters__item--price">
+              <fieldset class="price-filter">
+              <legend class="price-filter__title">Цена:</legend>
+              <div class="price-filter__range-slider">
+                <div class="price-filter__range-slider-track"> <!-- двойной слайдер -->
+                  <div class="price-filter__range-slider-pin range-slider-pin--min"></div>
+                  <div class="price-filter__range-slider-pin range-slider-pin--max"></div>
+                </div>
+                <input type="number" value="0" name="min">
+                <span>—</span>
+                <input type="number" value="3000" name="max">
               </div>
-              <input type="number" value="0" name="min">
-              <span>—</span>
-              <input type="number" value="3000" name="max">
-            </div>
-          </fieldset>
-          <fieldset class="filters__manufacturers manufacturers">
-            <legend class="manufacturers__title">Производители:</legend>
-            <ul class="manufacturers__list">
-              <li class="manufacturers__item">
-                <input id="manufacturers-Bosch" type="checkbox" name="Bosch" checked>
-                <label for="manufacturers-Bosch">Bosch</label>
-              </li>
-              <li class="manufacturers__item">
-                <input id="manufacturers-Interskol" type="checkbox" name="Interskol">
-                <label for="manufacturers-Interskol">Интерскол</label>
-              </li>
-              <li class="manufacturers__item">
-                <input id="manufacturers-Makita" type="checkbox" name="Makita" checked>
-                <label for="manufacturers-Makita">Makita</label>
-              </li>
-              <li class="manufacturers__item">
-                <input id="manufacturers-Dewalt" type="checkbox" name="Dewalt">
-                <label for="manufacturers-Dewalt">Dewalt</label>
-              </li>
-              <li class="manufacturers__item">
-                <input id="manufacturers-Hitachi" type="checkbox" name="Hitachi">
-                <label for="manufacturers-Hitachi">Hitachi</label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="filters__power power">
-            <legend class="power__title">Питание:</legend>
-            <ul class="power__list">
-              <li class="power__item">
-                <input id="power-battery" type="radio" name="power-type" value="battery" checked>
-                <label for="power-battery">Аккумуляторные</label>
-              </li>
-              <li class="power__item">
-                <input id="power-socket" type="radio" name="power-type" value="socket" checked>
-                <label for="power-socket">Сетевые</label>
-              </li>
-            </ul>
-          </fieldset>
-          <button type="submit">Показать</button>
+            </fieldset>
+            </li>
+            <li class="filters__item filters__item--manufacturers">
+              <fieldset class="manufacturers-filter">
+              <legend class="manufacturers-filter__title">Производители:</legend>
+              <ul class="manufacturers-filter__list">
+                <li class="manufacturers-filter__item">
+                  <input id="manufacturers-filter-Bosch" type="checkbox" name="Bosch" checked>
+                  <label for="manufacturers-filter-Bosch">Bosch</label>
+                </li>
+                <li class="manufacturers-filter__item">
+                  <input id="manufacturers-filter-Interskol" type="checkbox" name="Interskol">
+                  <label for="manufacturers-filter-Interskol">Интерскол</label>
+                </li>
+                <li class="manufacturers-filter__item">
+                  <input id="manufacturers-filter-Makita" type="checkbox" name="Makita" checked>
+                  <label for="manufacturers-filter-Makita">Makita</label>
+                </li>
+                <li class="manufacturers-filter__item">
+                  <input id="manufacturers-filter-Dewalt" type="checkbox" name="Dewalt">
+                  <label for="manufacturers-filter-Dewalt">Dewalt</label>
+                </li>
+                <li class="manufacturers-filter__item">
+                  <input id="manufacturers-filter-Hitachi" type="checkbox" name="Hitachi">
+                  <label for="manufacturers-filter-Hitachi">Hitachi</label>
+                </li>
+              </ul>
+            </fieldset>
+            </li>
+            <li class="filters__item filters__item--power">
+              <fieldset class="power-filter">
+              <legend class="power-filter__title">Питание:</legend>
+              <ul class="power-filter__list">
+                <li class="power-filter__item">
+                  <input id="power-filter-battery" type="radio" name="power-type" value="battery" checked>
+                  <label for="power-filter-battery">Аккумуляторные</label>
+                </li>
+                <li class="power-filter__item">
+                  <input id="power-filter-socket" type="radio" name="power-type" value="socket" checked>
+                  <label for="power-filter-socket">Сетевые</label>
+                </li>
+              </ul>
+            </fieldset>
+            </li>
+          </ul>
+          <button class="filters__button" type="submit">Показать</button>
         </form>
       </section>
 
