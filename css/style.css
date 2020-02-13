@@ -299,12 +299,60 @@ body {
   background-color: #f4f2ed;
 }
 
-.filters__title {
+.filters__title,
+.sorting__title {
   font-family: 'Cuprum', Arial, sans-serif;
-  font-size: 18px;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.filters fieldset {
+  border: none;
+}
+
+.filters legend {
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 800;
+  color: #000000;
+}
+
+.filters__list,
+.sorting__list,
+.sorting__method {
+  list-style: none;
+}
+
+.manufacturers-filter__list,
+.power-filter__list {
+  list-style: none;
+}
+
+.manufacturers-filter__item,
+.power-filter__item {
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 15px;
   line-height: 20px;
   font-weight: 400;
   color: #000000;
+}
+
+.manufacturers-filter input:disabled + label,
+.power-filter input:disabled + label {
+  color: #000000;
+  opacity: 0.4;
+}
+
+.filters__button {
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: uppercase;
 }
 
 /* footer */
