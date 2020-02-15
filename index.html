@@ -100,33 +100,29 @@
             </div>
           </li>
           <li class="promo__item">
-            <div class="promo__slider slider">
-              <ul class="slider__list">
-                <li class="slider__item slider__item--current">
-                  <h3 class="slider__item-title">Дрели</h3>
-                  <p class="slider__item-text">Соседям на радость!</p>
+            <div class="promo__slider pr-slider">
+              <div class="pr-slider__control">
+                <input class="visuallyhidden" type="radio" id="pr-slider-1" name="pr-slider-toggle" checked>
+                <label for="pr-slider-1">Промо — Перфораторы</label>
+                <input class="visuallyhidden" type="radio" id="pr-slider-2" name="pr-slider-toggle">
+                <label for="pr-slider-2">Промо — Дрели</label>
+                <button class="pr-slider__button pr-slider__button--previous" type="button" name="prslider__button--previous">˂</button>
+                <button class="pr-slider__button pr-slider__button--next" type="button" name="prslider__button--next">˃</button>
+              </div>
+              <ul class="pr-slider__list">
+                <li class="pr-slider__item pr-slide" id="slide1">
+                  <h3 class="pr-slide__title">Дрели</h3>
+                  <p class="pr-slide__text">Соседям на радость!</p>
                   <img src="./img/slider-drill.jpg" width="620" height="266" alt="Промо-фото с дрелью.">
-                  <a class="slider__button big-button big-button--red" href="./catalog.html">Открыть Каталог</a>
-                  <div class="slider__marks">
-                    <span class="slider__mark slider__mark--current">⦿</span>
-                    <span class="slider__mark">○</span>
-                  </div>
+                  <a class="pr-slide__button big-button big-button--red" href="./catalog.html">Открыть Каталог</a>
                 </li>
-                <li class="slider__item">
-                  <h3 class="slider__item-title">Перфораторы</h3>
-                  <p class="slider__item-text">Настоящие мужские игрушки</p>
+                <li class="pr-slider__item pr-slide" id="slide2">
+                  <h3 class="pr-slide__title">Перфораторы</h3>
+                  <p class="pr-slide__text">Настоящие мужские игрушки</p>
                   <img src="./img/slider-perforator.jpg" width="620" height="266" alt="Промо-фото с перфоратором.">
-                  <a class="slider__button big-button big-button--red" href="./catalog.html">Открыть Каталог</a>
-                  <div class="slider__marks">
-                    <span class="slider__mark">○</span>
-                    <span class="slider__mark slider__mark--current">⦿</span>
-                  </div>
+                  <a class="pr-slide__button big-button big-button--red" href="./catalog.html">Открыть Каталог</a>
                 </li>
               </ul>
-              <div class="slider__control">
-                <div class="slider__previous-button">˂</div>
-                <div class="slider__next-button">˃</div>
-              </div>
             </div>
           </li>
         </ul>
