@@ -316,9 +316,8 @@ body {
   background-color: #f4f2ed;
 }
 
-.filters__title,
-.sorting__title {
-  font-family: 'Cuprum', Arial, sans-serif;
+.filters__title {
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
