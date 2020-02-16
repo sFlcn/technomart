@@ -539,8 +539,38 @@ body {
   box-shadow: inset 0 0;
 }
 
+.pagination__list {
+  list-style: none;
+}
+
+.pagination__item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.pagination__item {
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: #ffffff;
+}
+
+.pagination__item--current {
+  color: #ffffff;
+  background-color: #ee3643;
+}
+
 .pagination__item--previous {
   display: none;
+}
+
+.about-product {
+  background-color: #f2f6f8;
 }
 
 
