@@ -69,6 +69,7 @@ body {
   box-shadow: 0 5px #8e1e26;
 }
 
+
 /* header */
 
 .header {
@@ -257,6 +258,7 @@ body {
   color: rgba(255, 255, 255, 0.5);
   background-color: #1d2739;
 }
+
 
 /* main */
 
@@ -462,6 +464,10 @@ body {
   box-shadow: inset 0 0;
 }
 
+.pagination__item--previous {
+  display: none;
+}
+
 
 /* footer */
 
@@ -548,4 +554,16 @@ body {
   color: #ee3643;
 }
 
+
 /* popups */
+
+.popup {
+  display: none
+}
+
+
+/* sliders */
+
+#slide2 {
+  display: none
+}
