@@ -287,8 +287,16 @@ body {
   text-transform: uppercase;
 }
 
+.main__title {
+  background-color: #f2f6f8;
+}
+
 .section-title--Blue {
   color: #32425c;
+}
+
+.showcase-header {
+  background-color: #f9f5f0;
 }
 
 .section-text {
