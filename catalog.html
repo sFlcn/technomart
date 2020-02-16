@@ -84,17 +84,17 @@
                   <legend class="price-filter__title">Цена:</legend>
                   <div class="price-filter__range-controls">
                     <div class="price-filter__range-scale"> <!-- шкала ползунков -->
-                      <div class="price-filter__range-bar"></div> <!-- прогесс-бар ползунков -->
+                      <div class="price-filter__range-bar">○———○—</div> <!-- прогесс-бар ползунков -->
                     </div>
                     <div class="price-filter__pin price-filter__pin--min"></div> <!-- левый ползунок -->
                     <div class="price-filter__pin price-filter__pin--max"></div> <!-- правый ползунок -->
                   </div>
                   <div class="price-filter__price-controls">
                     <label class="price-filter__min-price">от
-                      <input type="number" value="0" name="min-price">
+                      <input class="price-filter__input" type="number" value="0" name="min-price">
                     </label>
                     <label class="price-filter__max-price"> до
-                      <input type="number" value="3000" name="max-price">
+                      <input class="price-filter__input" type="number" value="3000" name="max-price">
                     </label>
                   </div>
                 </fieldset>
