@@ -340,7 +340,7 @@ body {
 
 .filters__list,
 .sorting__list,
-.sorting__method {
+.sorting__methods {
   list-style: none;
 }
 
@@ -372,6 +372,51 @@ body {
   font-weight: 400;
   color: #000000;
   text-transform: uppercase;
+}
+
+.sorting {
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.sorting__title {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.sorting__item a {
+  color: rgba(0, 0, 0, 0.3);
+
+  border-bottom: 1px dashed #ee3643;
+  text-decoration: none;
+}
+
+.sorting__item a:hover,
+.sorting__item a:focus {
+  color: #000000;
+}
+
+.sorting__item--current a {
+  color: #ee3643;
+}
+
+.sorting__method a {
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+.sorting__method a:hover,
+.sorting__method a:focus {
+  color: #000000;
+}
+
+.sorting__method--current a {
+  color: #ee3643;
 }
 
 .products__list {
