@@ -24,6 +24,7 @@ body {
 }
 
 .big-button {
+  font-family: 'Cuprum', Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
   text-decoration: none;
