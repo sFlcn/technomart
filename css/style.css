@@ -307,6 +307,61 @@ body {
   color: #000000;
 }
 
+.promo__item {
+  background-color: #9e8f80;
+}
+
+.materials-feature {
+  background-color: #ffbf47;
+}
+
+.tools-feature {
+  background-color: #3bbce3;
+}
+
+.equipment-feature {
+  background-color: #dc91d8;
+}
+
+.discounts-feature {
+  background-color: #8ed78f;
+}
+
+.delivery-feature {
+  background-color: #ffc047;
+}
+
+.features {
+  font-family: 'Cuprum', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #ffffff;
+
+  list-style: none;
+}
+
+.feature__title {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 800;
+}
+
+.feature__link {
+  color: inherit;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.feature__link:hover,
+.feature__link:focus {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.feature__link:active {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 .transport__list {
   list-style: none;
 }
