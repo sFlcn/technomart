@@ -514,7 +514,8 @@ body {
   background-color: #ffffff;
 }
 
-.product:hover {
+.product:hover,
+.product:focus {
   background-color: #ffffff;
   box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
 }
