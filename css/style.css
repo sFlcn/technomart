@@ -10,6 +10,15 @@ body {
   text-transform: none;
 
   background-color: #ffffff;
+
+  /* временно для сетки */
+  min-width: 1200px;
+  min-height: 3151px;
+
+  background-image: url('../technomart-index.jpg');
+  background-size: 1200px 3151px;
+  background-position: top center;
+  background-repeat: no-repeat;
 }
 
 .visuallyhidden {
@@ -822,4 +831,60 @@ body {
   background-image: url("../img/service-credit.png");
   background-repeat: no-repeat;
   background-position: right bottom;
+}
+
+
+/* сетка */
+
+.header {
+  margin-bottom: 75px;
+
+  /* Временно для сетки */
+  /* min-height: 320px;
+
+  background-color: rgba(13, 173, 62, 0.1);
+  outline: 3px solid rgba(13, 173, 62, 0.3); */
+}
+
+.header__top {
+  margin-bottom: 60px;
+
+  width: 100%;
+  /* Временно для сетки */
+  /* min-height: 42px;
+  opacity: 0.5;
+  outline: 3px solid rgba(197, 38, 38, 0.3); */
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.header__logo {
+  width: 220px;
+  height: 42px;
+
+  /* Временно для сетки */
+  /* background-color: rgba(220, 150, 30, 0.1);
+  outline: 3px solid rgba(220, 150, 30, 0.3); */
+}
+
+.header__buttons {
+  min-width: 150px;
+  /* Временно для сетки */
+  /* min-height: 42px;
+
+  background-color: rgba(222, 222, 22, 0.1);
+  outline: 3px solid rgba(222, 222, 22, 0.3); */
+}
+
+.header__buttons--search {
+  margin-right: 120px;
 }
