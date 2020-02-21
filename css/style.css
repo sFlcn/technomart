@@ -908,3 +908,7 @@ body {
   display: flex;
   flex-direction: row;
 }
+
+.index-column {
+  display: flex;
+}
