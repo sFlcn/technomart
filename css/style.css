@@ -912,3 +912,36 @@ body {
 .index-column {
   display: flex;
 }
+
+.footer__top-wrapper {
+  display: flex;
+}
+
+.footer__logo-container {
+  min-width: 350px;
+}
+
+.footer__logo {
+  min-height: 63px;
+}
+
+.footer-nav__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-nav__item {
+  padding: 0 20px;
+}
+
+.footer__bottom-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.socials__list,
+.feedback {
+  display: flex;
+}
