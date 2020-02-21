@@ -903,4 +903,8 @@ body {
   flex-direction: row;
   justify-content: space-around;
 }
+
+.service-slider {
+  display: flex;
+  flex-direction: row;
 }
