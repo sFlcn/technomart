@@ -11,14 +11,22 @@ body {
 
   background-color: #ffffff;
 
+  box-sizing: border-box;
+
   /* временно для сетки */
-  min-width: 1200px;
+  /* min-width: 1200px;
   min-height: 3151px;
 
   background-image: url('../technomart-index.jpg');
   background-size: 1200px 3151px;
   background-position: top center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 .visuallyhidden {
@@ -166,6 +174,8 @@ body {
 }
 
 .header__info {
+  margin: 0px;
+
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 16px;
   line-height: 23px;
@@ -192,6 +202,10 @@ body {
 
 .login__list {
   list-style: none;
+}
+
+.login__item--user {
+  display: none;
 }
 
 .login__item a {
@@ -837,54 +851,56 @@ body {
 /* сетка */
 
 .header {
-  margin-bottom: 75px;
-
-  /* Временно для сетки */
-  /* min-height: 320px;
-
-  background-color: rgba(13, 173, 62, 0.1);
-  outline: 3px solid rgba(13, 173, 62, 0.3); */
+  min-height: 320px;
 }
 
 .header__top {
-  margin-bottom: 60px;
-
+  min-height: 42px;
   width: 100%;
-  /* Временно для сетки */
-  /* min-height: 42px;
-  opacity: 0.5;
-  outline: 3px solid rgba(197, 38, 38, 0.3); */
 }
 
-.container {
-  width: 940px;
+.wrapper {
   margin: 0 auto;
-  padding: 0 5px;
+  width: 940px;
 }
 
-.container {
+.header__top-wrapper {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
 }
 
 .header__logo {
   width: 220px;
   height: 42px;
-
-  /* Временно для сетки */
-  /* background-color: rgba(220, 150, 30, 0.1);
-  outline: 3px solid rgba(220, 150, 30, 0.3); */
 }
 
 .header__buttons {
   min-width: 150px;
-  /* Временно для сетки */
-  /* min-height: 42px;
-
-  background-color: rgba(222, 222, 22, 0.1);
-  outline: 3px solid rgba(222, 222, 22, 0.3); */
 }
 
 .header__buttons--search {
-  margin-right: 120px;
+  margin-left: 0px;
+  margin-right: auto;
+}
+
+.header__middle-wrapper {
+  min-height: 78px;
+  margin-top: 43px;
+  margin-bottom: 37px;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.site-nav {
+  flex-grow: 1;
+}
+
+.site-nav__list {
+  padding: 0;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
 }

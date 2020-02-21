@@ -11,57 +11,63 @@
 
     <header class="header">
       <div class="header__top">
-        <div class="header__logo">
-          <a href="./index.html" class="logo"><img src="./img/logo-technomart.svg" width="108" height="18" alt="логотип «ТЕХНОМАРТ»."></a>
-        </div>
-        <div class="header__buttons">
-          <form class="header__search" action="https://echo.htmlacademy.ru" method="get">
-            <label class="visuallyhidden" for="header__search-field">Поиск</label>
-            <input id="header__search-field" class="header__search-field" type="search" name="shop-search" placeholder="Поиск:">
-          </form>
-        </div>
-        <div class="header__buttons">
-          <a class="bookmarks" href="#">Закладки: 0</a>
-        </div>
-        <div class="header__buttons header__buttons--red">
-          <a class="cart" href="#">Корзина: 10</a>
-        </div>
-        <div class="header__buttons header__buttons--green">
-          <a class="checkout" href="#">Оформить заказ</a>
+        <div class="header__top-wrapper wrapper">
+          <div class="header__logo">
+            <a href="./index.html" class="logo"><img src="./img/logo-technomart.svg" width="108" height="18" alt="логотип «ТЕХНОМАРТ.»"></a>
+          </div>
+          <div class="header__buttons header__buttons--search">
+            <form class="header__search" action="https://echo.htmlacademy.ru" method="get">
+              <label class="visuallyhidden" for="header__search-field">Поиск</label>
+              <input id="header__search-field" class="header__search-field" type="search" name="shop-search" placeholder="Поиск:">
+            </form>
+          </div>
+          <div class="header__buttons">
+            <a class="bookmarks" href="#">Закладки: 0</a>
+          </div>
+          <div class="header__buttons">
+            <a class="cart" href="#">Корзина: 0</a>
+          </div>
+          <div class="header__buttons header__buttons--green">
+            <a class="checkout" href="#">Оформить заказ</a>
+          </div>
         </div>
       </div>
       <div class="header__middle">
-        <p class="header__info">
-          Интернет-магазин<br>
-          строительных материалов<br>
-          и инструментов для ремонта
-        </p>
-        <div class="header__contacts">
-          <a class="header__tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
-          <p class="header__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-        </div>
-        <div class="header__login login">
-          <ul class="login__list">
-            <li class="login__item"><div class="login__enter"><a href="#">Войти</a></div></li>
-            <li class="login__item"><div class="login__registration"><a href="#">Регистрация</a></div></li>
-            <li class="login__item"><div class="login__user-name"><a href="#">Равшан Джамшутович</a></div></li>
-            <li class="login__item"><div class="login__user-logout"><a href="#">выход</a></div></li>
-            <li class="login__item"><div class="login__user-orders"><a href="#">Мои заказы</a></div></li>
-            <li class="login__item"><div class="login__user-profile"><a href="#">Личный кабинет</a></div></li>
-          </ul>
+        <div class="header__middle-wrapper wrapper">
+          <p class="header__info">
+            Интернет-магазин<br>
+            строительных материалов<br>
+            и инструментов для ремонта
+          </p>
+          <div class="header__contacts">
+            <a class="header__tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
+            <p class="header__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          </div>
+          <div class="header__login login">
+            <ul class="login__list">
+              <li class="login__item login__item--guest"><div class="login__enter"><a href="#">Войти</a></div></li>
+              <li class="login__item login__item--guest"><div class="login__registration"><a href="#">Регистрация</a></div></li>
+              <li class="login__item login__item--user"><div class="login__user-name"><a href="#">Равшан Джамшутович</a></div></li>
+              <li class="login__item login__item--user"><div class="login__user-logout"><a href="#">выход</a></div></li>
+              <li class="login__item login__item--user"><div class="login__user-orders"><a href="#">Мои заказы</a></div></li>
+              <li class="login__item login__item--user"><div class="login__user-profile"><a href="#">Личный кабинет</a></div></li>
+            </ul>
+          </div>
         </div>
       </div>
-      <nav class="header__nav site-nav">
-        <ul class="site-nav__list">
-          <li class="site-nav__item"><div><a href="./index.html">Главная</a></div></li>
-          <li class="site-nav__item"><div><a href="#">Компания</a></div></li>
-          <li class="site-nav__item site-nav__item--current"><div><a href="#">Каталог</a></div></li>
-          <li class="site-nav__item"><div><a href="#">Новости</a></div></li>
-          <li class="site-nav__item"><div><a href="#">Спецпредложения</a></div></li>
-          <li class="site-nav__item"><div><a href="#">Доставка</a></div></li>
-          <li class="site-nav__item"><div><a href="#">Контакты</a></div></li>
-        </ul>
-      </nav>
+      <div class="header__nav-wrapper wrapper">
+        <nav class="header__nav site-nav">
+          <ul class="site-nav__list">
+            <li class="site-nav__item site-nav__item--current"><div><a href="#">Главная</a></div></li>
+            <li class="site-nav__item"><div><a href="#">Компания</a></div></li>
+            <li class="site-nav__item"><div><a href="./catalog.html">Каталог</a></div></li>
+            <li class="site-nav__item"><div><a href="#">Новости</a></div></li>
+            <li class="site-nav__item"><div><a href="#">Спецпредложения</a></div></li>
+            <li class="site-nav__item"><div><a href="#">Доставка</a></div></li>
+            <li class="site-nav__item"><div><a href="#">Контакты</a></div></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main class="main">
