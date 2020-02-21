@@ -493,14 +493,14 @@ body {
   font-weight: 400;
   color: #000000;
   text-transform: uppercase;
+
+  background-color: #f7f3ec;
 }
 
 .sorting__title {
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
-
-  background-color: #f7f3ec;
 }
 
 .sorting__item a {
@@ -904,6 +904,13 @@ body {
   justify-content: space-around;
 }
 
+.breadcrumb {
+  margin: 0px;
+  padding: 0px;
+
+  display: flex;
+}
+
 .service-slider {
   display: flex;
   flex-direction: row;
@@ -911,6 +918,28 @@ body {
 
 .index-column {
   display: flex;
+}
+
+.perforators__catalog-wrapper {
+  display: flex;
+}
+
+.filters {
+  width: 220px;
+}
+
+.products-container {
+  flex-grow: 1;
+}
+
+.sorting,
+.pagination__list {
+  display: flex;
+}
+
+.products__list {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .footer__top-wrapper {
