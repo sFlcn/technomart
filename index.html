@@ -73,63 +73,51 @@
     <main class="main">
       <h1 class="main__title visuallyhidden">Интернет-магазин строительных материалов «ТЕХНОМАРТ»</h1>
       <section class="promo">
-        <h2 class="promo_title section-title visuallyhidden">Промо-блок</h2>
+        <h2 class="promo__title section-title visuallyhidden">Промо-блок</h2>
         <div class="promo__wrapper wrapper">
           <ul class="promo__list features">
-            <li class="promo__item promo__item--new">
-              <div class="feature materials-feature">
-                <h3 class="feature__title">Материалы</h3>
-                <a href="#" class="feature__link">на любой вкус</a>
-              </div>
+            <li class="promo__item feature feature--new materials-feature">
+              <h3 class="feature__title">Материалы</h3>
+              <a href="#" class="feature__link">на любой вкус</a>
             </li>
-            <li class="promo__item">
-              <div class="feature tools-feature">
-                <h3 class="feature__title">Инструмент</h3>
-                <a href="#" class="feature__link">на все случаи</a>
-              </div>
+            <li class="promo__item feature tools-feature">
+              <h3 class="feature__title">Инструмент</h3>
+              <a href="#" class="feature__link">на все случаи</a>
             </li>
-            <li class="promo__item">
-              <div class="feature equipment-feature">
-                <h3 class="feature__title">Техника</h3>
-                <a href="#" class="feature__link">для стройки</a>
-              </div>
+            <li class="promo__item feature equipment-feature">
+              <h3 class="feature__title">Техника</h3>
+              <a href="#" class="feature__link">для стройки</a>
             </li>
-            <li class="promo__item">
+            <li class="promo__item pr-slider">
+              <div class="pr-slider__control">
+                <input class="visuallyhidden" type="radio" id="pr-slider-1" name="pr-slider-toggle" checked>
+                <label for="pr-slider-1">Промо — Перфораторы</label>
+                <input class="visuallyhidden" type="radio" id="pr-slider-2" name="pr-slider-toggle">
+                <label for="pr-slider-2">Промо — Дрели</label>
+                <button class="pr-slider__button pr-slider__button--previous" type="button" name="prslider__button--previous">˂</button>
+                <button class="pr-slider__button pr-slider__button--next" type="button" name="prslider__button--next">˃</button>
+              </div>
+              <ul class="pr-slider__list">
+                <li class="pr-slider__item pr-slide pr-slide--1">
+                  <h3 class="pr-slide__title">Дрели</h3>
+                  <p class="pr-slide__text">Соседям на радость!</p>
+                  <a class="pr-slide__button big-button big-button--red" href="./catalog.html">Открыть Каталог</a>
+                </li>
+                <li class="pr-slider__item pr-slide pr-slide--2">
+                  <h3 class="pr-slide__title">Перфораторы</h3>
+                  <p class="pr-slide__text">Настоящие мужские игрушки</p>
+                  <a class="pr-slide__button big-button big-button--red" href="./catalog.html">Открыть Каталог</a>
+                </li>
+              </ul>
+            </li>
+            <li class="promo__item promo__item--pack">
               <div class="feature discounts-feature">
                 <h3 class="feature__title">Скидки 50%</h3>
                 <a href="#" class="feature__link">на 350 товаров</a>
               </div>
-            </li>
-            <li class="promo__item">
               <div class="feature delivery-feature">
                 <h3 class="feature__title">Доставка</h3>
                 <a href="#" class="feature__link">бесплатно</a>
-              </div>
-            </li>
-            <li class="promo__item">
-              <div class="promo__slider pr-slider">
-                <div class="pr-slider__control">
-                  <input class="visuallyhidden" type="radio" id="pr-slider-1" name="pr-slider-toggle" checked>
-                  <label for="pr-slider-1">Промо — Перфораторы</label>
-                  <input class="visuallyhidden" type="radio" id="pr-slider-2" name="pr-slider-toggle">
-                  <label for="pr-slider-2">Промо — Дрели</label>
-                  <button class="pr-slider__button pr-slider__button--previous" type="button" name="prslider__button--previous">˂</button>
-                  <button class="pr-slider__button pr-slider__button--next" type="button" name="prslider__button--next">˃</button>
-                </div>
-                <ul class="pr-slider__list">
-                  <li class="pr-slider__item pr-slide" id="slide1">
-                    <h3 class="pr-slide__title">Дрели</h3>
-                    <p class="pr-slide__text">Соседям на радость!</p>
-                    <img src="./img/slider-drill.jpg" width="620" height="266" alt="Промо-фото с дрелью.">
-                    <a class="pr-slide__button big-button big-button--red" href="./catalog.html">Открыть Каталог</a>
-                  </li>
-                  <li class="pr-slider__item pr-slide" id="slide2">
-                    <h3 class="pr-slide__title">Перфораторы</h3>
-                    <p class="pr-slide__text">Настоящие мужские игрушки</p>
-                    <img src="./img/slider-perforator.jpg" width="620" height="266" alt="Промо-фото с перфоратором.">
-                    <a class="pr-slide__button big-button big-button--red" href="./catalog.html">Открыть Каталог</a>
-                  </li>
-                </ul>
               </div>
             </li>
           </ul>
