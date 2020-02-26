@@ -709,12 +709,31 @@ body {
 }
 
 .popular-manufacturers__list {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
   list-style: none;
 }
 
 .popular-manufacturers__item {
+  width: 220px;
+  min-height: 145px;
   text-align: center;
   background-color: #ffffff;
+  margin-bottom: 20px;
+
+  text-align: center;
+  border: 1px solid #eaeaea;
+}
+
+.popular-manufacturers__item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
 }
 
 .popular-manufacturers__item:hover,
