@@ -898,7 +898,20 @@ body {
 }
 
 .service-slider__list {
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.service-slide {
+  width: 620px;
+  height: 285px;
+
+  display: none;
+}
+
+.service-slide--active {
+  display: block;
 }
 
 .service-slider__option {
