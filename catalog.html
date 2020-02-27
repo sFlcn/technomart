@@ -332,11 +332,21 @@
               </div>
 
               <ul class="pagination__list">
-                <li class="pagination__item pagination__item--previous"><a href="#">Предыдущая</a></li>
-                <li class="pagination__item pagination__item--current">1</li>
-                <li class="pagination__item"><a href="#">2</a></li>
-                <li class="pagination__item"><a href="#">3</a></li>
-                <li class="pagination__item pagination__item--next"><a href="#">Следующая</a></li>
+                <li class="pagination__item pagination__item--control visuallyhidden">
+                  <a href="#" class="pagination__link pagination__link--control">Предыдущая</a><span class="visuallyhidden">Страница</span>
+                </li>
+                <li class="pagination__item">
+                  <span class="visuallyhidden">Страница</span><span class="pagination__link pagination__link--current">1</span>
+                </li>
+                <li class="pagination__item">
+                  <span class="visuallyhidden">Страница</span><a href="#" class="pagination__link">2</a>
+                </li>
+                <li class="pagination__item">
+                  <span class="visuallyhidden">Страница</span><a href="#" class="pagination__link">3</a>
+                </li>
+                <li class="pagination__item">
+                  <a href="#" class="pagination__link pagination__link--control">Следующая</a><span class="visuallyhidden">Страница</span>
+                </li>
               </ul>
             </div>
           </div>
@@ -344,12 +354,14 @@
       </section>
 
       <section class="about-product">
-        <h2 class="about-product__title section-title">Пара слов о перфораторах</h2>
-        <p class="section-text">
-          Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
-          Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. <br>
-          В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
-        </p>
+        <div class="about-products__wrapper wrapper">
+          <h2 class="about-product__title section-title">Пара слов о перфораторах</h2>
+          <p class="section-text">
+            Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
+            Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. <br>
+            В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+          </p>
+        </div>
       </section>
     </main>
 
