@@ -311,16 +311,18 @@ body {
   text-transform: uppercase;
 }
 
-.main__title {
-  background-color: #f2f6f8;
-}
-
-.section-title--blue {
-  color: #32425c;
-}
-
 .showcase-header {
+  min-height: 89px;
+  padding-left: 28px;
+  padding-right: 24px;
+  margin-bottom: 20px;
+
   background-color: #f9f5f0;
+}
+
+.showcase-header--blue {
+  background-color: #f2f6f8;
+  color: #32425c;
 }
 
 .section-text {
