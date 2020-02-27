@@ -412,6 +412,12 @@ body {
 }
 
 .filters__title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 19px;
+  margin-top: 0;
+  margin-bottom: 12px;
+
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -427,6 +433,9 @@ body {
 }
 
 .filters {
+  min-width: 220px;
+  margin-right: 20px;
+
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 17px;
   line-height: 30px;
@@ -438,7 +447,16 @@ body {
 .filters__list,
 .sorting__list,
 .sorting__methods {
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.price-filter,
+.manufacturers-filter,
+.power-filter {
+  padding: 0;
+  margin: 0;
 }
 
 .price-filter__range-scale {
@@ -446,18 +464,22 @@ body {
 }
 
 .price-filter__price-controls {
-  font-size: 17px;
-  line-height: 18px;
-  font-weight: 400;
+  font-size: 0;
+}
+
+.price-filter__price {
+  display: inline-block;
 }
 
 .price-filter__input {
-  font: inherit;
-  background-color: #f7f3ec;
-}
+  width: 95px;
 
-.price-filter__min-price {
-  font: inherit;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 400;
+  text-align: center;
+
+  background-color: #f7f3ec;
 }
 
 .manufacturers-filter__list,
@@ -491,6 +513,10 @@ body {
 }
 
 .sorting {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -501,7 +527,19 @@ body {
   background-color: #f7f3ec;
 }
 
+.sorting__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .sorting__title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 19px;
+  margin: 0;
+
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
@@ -749,6 +787,7 @@ body {
 }
 
 .pagination__list {
+  display: flex;
   list-style: none;
 }
 
@@ -1071,7 +1110,7 @@ body {
   display: flex;
 }
 
-.perforators__catalog-wrapper {
+.perforators__catalog-container {
   display: flex;
 }
 
@@ -1081,11 +1120,6 @@ body {
 
 .products-container {
   flex-grow: 1;
-}
-
-.sorting,
-.pagination__list {
-  display: flex;
 }
 
 .products__list {
