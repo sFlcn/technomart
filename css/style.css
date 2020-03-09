@@ -303,8 +303,7 @@ body {
 
 .main__title,
 .section-title {
-  margin-top: 0px;
-  margin-bottom: 26px;
+  margin: 0px;
 
   font-family: 'Cuprum', Arial, sans-serif;
   font-size: 30px;
@@ -312,6 +311,10 @@ body {
   font-weight: 400;
   color: #000000;
   text-transform: uppercase;
+}
+
+.showcase-header .section-title {
+  color: #32425c;
 }
 
 .showcase-header {
@@ -395,6 +398,7 @@ body {
 
 .service {
   background-color: #f4f7f9;
+  padding-top: 65px;
 }
 
 .transport__list {
@@ -580,6 +584,7 @@ body {
 
 .products__list {
   padding: 0;
+  margin: 0;
 
   list-style: none;
 }
@@ -749,6 +754,14 @@ body {
   background-color: #518534;
   border-bottom: 0;
   border-bottom: 3px solid #367315;
+}
+
+.popular-products {
+  margin-bottom: 1px;
+}
+
+.popular-manufacturers {
+  margin-bottom: 65px;
 }
 
 .popular-manufacturers__list {
