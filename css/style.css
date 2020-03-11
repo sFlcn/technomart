@@ -66,6 +66,8 @@ body {
 
 .header__logo,
 .footer__logo {
+  display: flex;
+
   background-color: #ee3643;
   box-shadow: 0 5px #b52933;
 }
@@ -93,6 +95,11 @@ body {
   box-shadow: 0 5px #8e1e26;
 }
 
+.logo {
+  margin: auto;
+  padding-top: 10px;
+}
+
 /* header */
 
 .header {
@@ -117,53 +124,68 @@ body {
   justify-content: space-between;
 }
 
-.header__buttons {
+.header__button {
+  padding-top: 7px;
   min-width: 150px;
   min-height: 42px;
 }
 
-.header__buttons a {
+.header__button a {
   text-decoration: none;
 
   color: inherit;
 }
 
-.header__buttons:hover,
-.header__buttons:focus {
+.header__button:hover,
+.header__button:focus {
   background-color:   #212a3a;
 }
-.header__buttons:active{
+.header__button:active{
   color: rgba(255, 255, 255, 0.6);
   background-color:   #161d29;
 }
 
-.header__buttons--green {
+.header__button-bookmarks{
+  padding-left: 44px;
+}
+
+.header__button-cart{
+  padding-left: 49px;
+}
+
+.header__button-checkout {
+  display: flex;
+  justify-content: center;
+  padding-right: 2px;
+
   background-color: #63a63e;
 }
 
-.header__buttons--green:hover,
-.header__buttons--green:focus {
+.header__button-checkout:hover,
+.header__button-checkout:focus {
   background-color:   #5fbb2d;
 }
-.header__buttons--green:active {
+.header__button-checkout:active {
   color: rgba(255, 255, 255, 0.5);
   background-color:   #518534;
 }
 
-.header__buttons--red {
+.header__button--red {
   background-color: #ee3643;
 }
 
-.header__buttons--red:hover,
-.header__buttons--red:focus {
+.header__button--red:hover,
+.header__button--red:focus {
   background-color:   #ca2c37;
 }
-.header__buttons--red:active {
+.header__button--red:active {
   color: rgba(255, 255, 255, 0.5);
   background-color:   #ba2732;
 }
 
-.header__buttons--search {
+.header__button-search {
+  flex-grow: 1;
+  padding-left: 47px;
   margin-left: 0;
   margin-right: auto;
 }
