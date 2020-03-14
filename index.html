@@ -72,9 +72,9 @@
 
     <main class="main">
       <h1 class="main__title visuallyhidden">Интернет-магазин строительных материалов «ТЕХНОМАРТ»</h1>
-      <section class="promo">
-        <h2 class="promo__title section-title visuallyhidden">Промо-блок</h2>
-        <div class="promo__wrapper wrapper">
+      <div class="wrapper">
+        <section class="promo">
+          <h2 class="promo__title section-title visuallyhidden">Промо-блок</h2>
           <ul class="promo__list features">
             <li class="promo__item feature feature--new materials-feature">
               <h3 class="feature__title">Материалы</h3>
@@ -121,11 +121,9 @@
               </div>
             </li>
           </ul>
-        </div>
-      </section>
+        </section>
 
-      <section class="popular-products">
-        <div class="popular-products__wrapper wrapper">
+        <section class="popular-products">
           <div class="popular-products__header showcase-header">
             <h2 class="popular-products__title section-title">Популярные товары:</h2>
             <a href="#" class="popular-products__link big-button big-button--red">все популярные товары</a>
@@ -200,11 +198,9 @@
               <a href="#" class="product__price product__price--new">12500 Р.</a>
             </li>
           </ul>
-        </div>
-      </section>
+        </section>
 
-      <section class="popular-manufacturers">
-        <div class="popular-manufacturers__wrapper wrapper">
+        <section class="popular-manufacturers">
           <div class="popular-manufacturers__header showcase-header">
             <h2 class="popular-manufacturers__title section-title">Популярные производители:</h2>
             <a href="#" class="popular-manufacturers__link big-button big-button--red">все производители</a>
@@ -235,11 +231,11 @@
               <a href="#"><img src="./img/Metabo.png" width="204" height="69" alt="BOSCH."></a>
             </li>
           </ul>
-        </div>
-      </section>
+        </section>
+      </div>
 
       <section class="service">
-        <div class="service__wrapper wrapper">
+        <div class="wrapper">
           <h2 class="service__title section-title">Сервисы</h2>
           <p class="section-text">
             Хороший интернет-магазин отличается от плохого не только ценами!<br>
@@ -287,38 +283,40 @@
         </div>
       </section>
 
-      <div class="index-column wrapper">
-        <section class="about-us">
-          <h2 class="about-us__title section-title">Компания «Техномарт»</h2>
-          <p class="section-text">
-            Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.<br>
-            <br>
-            Мы можем доставить ваш товар в самые отдаленные точки России!<br>
-            Техномарт работает со многими транспортными компаниями:
-          </p>
-          <div class="about-us__transport transport">
-            <ul class="transport__list">
-              <li class="transport__item"><a href="https://www.dellin.ru" target="_blank">Деловые линии</a></li>
-              <li class="transport__item"><a href="http://www.autotrading.ru" target="_blank">Автотрейдинг</a></li>
-              <li class="transport__item"><a href="https://www.jde.ru" target="_blank">ЖелДорЭкспедиция</a></li>
-            </ul>
-          </div>
-          <a class="about-us__link big-button big-button--red" href="#">Подробнее о компании</a>
-        </section>
+      <div class="wrapper">
+        <div class="index-column">
+          <section class="about-us">
+            <h2 class="about-us__title section-title">Компания «Техномарт»</h2>
+            <p class="section-text">
+              Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.<br>
+              <br>
+              Мы можем доставить ваш товар в самые отдаленные точки России!<br>
+              Техномарт работает со многими транспортными компаниями:
+            </p>
+            <div class="about-us__transport transport">
+              <ul class="transport__list">
+                <li class="transport__item"><a href="https://www.dellin.ru" target="_blank">Деловые линии</a></li>
+                <li class="transport__item"><a href="http://www.autotrading.ru" target="_blank">Автотрейдинг</a></li>
+                <li class="transport__item"><a href="https://www.jde.ru" target="_blank">ЖелДорЭкспедиция</a></li>
+              </ul>
+            </div>
+            <a class="about-us__link big-button big-button--red" href="#">Подробнее о компании</a>
+          </section>
 
-        <section class="contacts">
-          <h2 class="contacts__title section-title">Контакты</h2>
-          <p class="section-text">
-            Вы можете забрать товар сами,<br>
-            заехав в наш офис:
-          </p>
-          <div class="contacts__map">
-            <a href="https://yandex.ru/maps/-/CKUmzAj1" target="_blank">
-              <img src="./img/map-small.png" width="300" height="158" alt="город Санкт-Петербург, улица Большая Конюшенная, дом 19/8.">
-            </a>
-          </div>
-          <a class="contacts__link big-button big-button--red" href="#">Заблудились? Напишите нам!</a>
-        </section>
+          <section class="contacts">
+            <h2 class="contacts__title section-title">Контакты</h2>
+            <p class="section-text">
+              Вы можете забрать товар сами,<br>
+              заехав в наш офис:
+            </p>
+            <div class="contacts__map">
+              <a href="https://yandex.ru/maps/-/CKUmzAj1" target="_blank">
+                <img src="./img/map-small.png" width="300" height="158" alt="город Санкт-Петербург, улица Большая Конюшенная, дом 19/8.">
+              </a>
+            </div>
+            <a class="contacts__link big-button big-button--red" href="#">Заблудились? Напишите нам!</a>
+          </section>
+        </div>
       </div>
     </main>
 
