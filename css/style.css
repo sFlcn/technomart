@@ -391,7 +391,11 @@ body {
 
 .main__title,
 .section-title {
-  margin: 0;
+  padding-top: 30px;
+  margin-top: 0;
+  margin-bottom: 26px;
+  margin-left: 0;
+  margin-right: 0;
 
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
@@ -413,8 +417,6 @@ body {
   padding-left: 28px;
   padding-right: 24px;
   margin-bottom: 20px;
-
-  align-items: center;
 
   background-color: #f9f5f0;
 }
@@ -499,7 +501,7 @@ body {
 }
 
 .service {
-  padding-top: 65px;
+  padding-top: 35px;
 
   background-color: #f4f7f9;
 }
@@ -699,6 +701,7 @@ body {
 
 .products-container {
   flex-grow: 1;
+  width: 700px;
 }
 
 .products {
@@ -811,6 +814,7 @@ body {
 
   position: absolute;
   top: 0;
+  right: 1px;
 
   width: 218px;
   height: 170px;
@@ -994,8 +998,8 @@ body {
 }
 
 .about-product {
-  padding-top: 65px;
-  padding-bottom: 39px;
+  padding-top: 35px;
+  padding-bottom: 55px;
   padding-left: 5px;
   padding-right: 5px;
 
@@ -1034,6 +1038,8 @@ body {
 }
 
 .footer-nav {
+  width: 590px;
+
   font-size: 18px;
   line-height: 24px;
 
