@@ -231,6 +231,7 @@ body {
 }
 
 .header__info {
+  max-width: 269px;
   margin: 0;
 
   font-family: "Cuprum", Arial, sans-serif;
@@ -506,6 +507,10 @@ body {
   background-color: #f4f7f9;
 }
 
+.service .section-text {
+  width: 410px;
+}
+
 .transport__list {
   list-style: none;
 }
@@ -518,6 +523,10 @@ body {
   text-decoration: none;
 
   color: #000000;
+}
+
+.contacts .section-text{
+  width: 200px;
 }
 
 .contacts__map {
@@ -1031,6 +1040,10 @@ body {
 
   color: #ffffff;
   background-color: #293449;
+}
+
+.footer__copyrights {
+  width: 227px;
 }
 
 .footer__logo-container {
