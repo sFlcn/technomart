@@ -145,7 +145,7 @@ img {
 .header__button:focus {
   background-color:   #212a3a;
 }
-.header__button:active{
+.header__button:active {
   color: rgba(255, 255, 255, 0.6);
   background-color:   #161d29;
 }
@@ -250,6 +250,14 @@ img {
   padding-top: 10px;
   padding-left: 17px;
   padding-right: 13px;
+}
+
+.header__button-search-label:active {
+  background-color: #ffffff;
+}
+
+.header__button-search-label:active path {
+  fill: #ee3643;
 }
 
 .header__button-search-icon path {
