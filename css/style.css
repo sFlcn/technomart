@@ -45,11 +45,24 @@ img {
 }
 
 .big-button {
+  display: inline-block;
+
+  width: 253px;
+  padding-top: 11px;
+  padding-bottom: 9px;
+  padding-left: 20px;
+  padding-right: 20px;
+
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
   text-decoration: none;
   text-transform: uppercase;
+  text-align: center;
+
+  border-radius: 3px;
+
+  overflow: hidden;
 }
 
 .big-button--white {
@@ -345,7 +358,7 @@ img {
   display: flex;
   justify-content: center;
   padding-top: 10px;
-  padding-left: 21px;
+  padding-left: 22px;
   min-width: 270px;
   min-height: 45px;
 
@@ -658,6 +671,8 @@ img {
 }
 
 .section-text {
+  margin: 0px;
+
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
@@ -741,26 +756,89 @@ img {
   width: 410px;
 }
 
-.transport__list {
-  list-style: none;
+.index-column {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 49px;
+  padding-bottom: 78px;
 }
 
-.transport__item a {
+.about-us {
+  width: 540px;
+}
+
+.about-us p {
+  margin-bottom: 24px;
+}
+
+.about-us__transport p {
+  margin-bottom: 21px;
+}
+
+.transport__list {
+  list-style: none;
+  padding-left: 36px;
+  margin-bottom: 16px;
+}
+
+.transport__item {
+  position: relative;
+
+  padding-bottom: 20px;
+
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 20px;
   font-weight: 400;
-  text-decoration: none;
 
   color: #000000;
 }
 
+.transport__item::before {
+  content: "";
+
+  position: absolute;
+  top: 9px;
+  left: -36px;
+
+  width: 25px;
+  height: 2px;
+  background-color: #ee3643;
+}
+
+.transport__item a {
+  text-decoration: none;
+
+  color: inherit;
+}
+
+.about-us__link {
+  width: 220px;
+  padding-left: 21px;
+}
+
+.contacts {
+  width: 300px;
+}
+
 .contacts .section-text{
   width: 200px;
+  margin-bottom: 31px;
 }
 
 .contacts__map {
+  display: block;
+
+  width: 300px;
+  height: 158px;
+  margin-bottom: 40px;
+
   background-color: #f4f2ed;
+}
+
+.contacts__link {
+  width: 100%;
+  padding-left: 26px;
 }
 
 .perforators__catalog-container {
@@ -1560,8 +1638,4 @@ img {
   background-image: url("../img/service-credit.png");
   background-repeat: no-repeat;
   background-position: right bottom;
-}
-
-.index-column {
-  display: flex;
 }
