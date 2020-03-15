@@ -706,6 +706,7 @@ img {
 .showcase-header {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   min-height: 89px;
   padding-left: 28px;
   padding-right: 24px;
@@ -718,6 +719,12 @@ img {
 .showcase-header--blue {
   background-color: #f2f6f8;
   color: #32425c;
+}
+
+.showcase-header a {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 10px;
 }
 
 .section-text {
