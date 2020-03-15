@@ -11,6 +11,7 @@ body {
   font-weight: 400;
   color: #000000;
   text-transform: none;
+  font-kerning: none;
 
   background-color: #ffffff;
 }
@@ -646,6 +647,7 @@ img {
   padding-left: 28px;
   padding-right: 24px;
   margin-bottom: 20px;
+  font-kerning: auto;
 
   background-color: #f9f5f0;
 }
