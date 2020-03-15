@@ -921,8 +921,6 @@ img {
 
 .filters fieldset {
   width: 220px;
-
-  border: none;
 }
 
 .filters {
@@ -947,43 +945,145 @@ img {
   list-style: none;
 }
 
-.price-filter,
-.manufacturers-filter,
-.power-filter {
+.price-filter {
   padding: 0;
   margin: 0;
+  margin-bottom: 17px;
+
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
 }
 
-.price-filter__range-scale {
+.price-filter__title {
+  margin-bottom: 13px;
+}
+
+.price-filter__range-controls {
+  position: relative;
+
+  margin-bottom: 9px;
+  padding-top: 39px;
+  padding-bottom: 39px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 3px;
+
   background-color: #f7f3ec;
 }
 
-.price-filter__price-controls {
-  font-size: 0;
+.price-filter__range-scale {
+  height: 2px;
+
+  background-color: #d7dcde;
+}
+
+.price-filter__range-bar {
+  height: 100%;
+  width: 89%;
+  margin-left: 0;
+
+  background-color: #00ca74;
+}
+
+.price-filter__pin {
+  position: absolute;
+  top: 31px;
+
+  width: 21px;
+  height: 21px;
+  margin: 0;
+  padding: 0;
+
+  background-image: url("../img/filter-button.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+
+  cursor: pointer;
+}
+
+.price-filter__pin--min {
+  left: 19px;
+}
+
+.price-filter__pin--max {
+  left: 159px;
 }
 
 .price-filter__price {
+  position: relative;
+
   display: inline-block;
+}
+
+.price-filter__price-controls {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 25px;
 }
 
 .price-filter__input {
   width: 95px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 18px;
 
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
   text-align: center;
 
+  border: 0;
+  border-radius: 3px;
   background-color: #f7f3ec;
+}
+
+.price-filter__price--max::before {
+  content: "";
+
+  position: absolute;
+  top: 19px;
+  left: -19px;
+
+  width: 9px;
+  height: 1px;
+  background-color: #444444;
+}
+
+.manufacturers-filter {
+  padding: 0;
+  padding-bottom: 1px;
+  margin: 0;
+  margin-bottom: 18px;
+
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.power-filter {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 57px;
+
+  border: none;
+}
+
+.manufacturers-filter__title,
+.power-filter__title {
+  margin-bottom: 14px;
 }
 
 .manufacturers-filter__list,
 .power-filter__list {
+  padding: 0;
   list-style: none;
 }
 
 .manufacturers-filter__item,
 .power-filter__item {
+  margin-bottom: 20px;
+
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 15px;
   line-height: 20px;
@@ -993,6 +1093,76 @@ img {
   color: #000000;
 }
 
+.filters__label {
+  position: relative;
+
+  padding-left: 34px;
+}
+
+.manufacturers-filter .filters__input:checked + .filters__label::before {
+  content: "";
+
+  position: absolute;
+  top: -3px;
+  left: 0;
+
+  width: 27px;
+  height: 23px;
+
+  background-image: url(../img/checkbox-on.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 27px 23px;
+}
+
+.manufacturers-filter .filters__input + .filters__label::before {
+  content: "";
+
+  position: absolute;
+  top: -3px;
+  left: 0;
+
+  width: 23px;
+  height: 23px;
+
+  background-image: url(../img/checkbox-off.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 23px 23px;
+}
+
+.power-filter .filters__input:checked + .filters__label::before {
+  content: "";
+
+  position: absolute;
+  top: -5px;
+  left: -1px;
+
+  width: 25px;
+  height: 25px;
+
+  background-image: url(../img/radio-on.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px 25px;
+}
+
+.power-filter .filters__input + .filters__label::before {
+  content: "";
+
+  position: absolute;
+  top: -5px;
+  left: -1px;
+
+  width: 25px;
+  height: 25px;
+
+  background-image: url(../img/radio-off.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px 25px;
+}
+
 .manufacturers-filter input:disabled + label,
 .power-filter input:disabled + label {
   color: #000000;
@@ -1000,13 +1170,29 @@ img {
 }
 
 .filters__button {
+  padding-top: 10px;
+  padding-bottom: 8px;
+  padding-left: 38px;
+  padding-right: 38px;
+
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
   text-transform: uppercase;
 
+  border: 1px solid #e5e5e5;
   color: #000000;
+}
+
+.filters__button:hover,
+.filters__button:focus {
+  border: 1px solid #bdc6ca;
+}
+
+.filters__button:active {
+  border: 1px solid #ee3643;
+  outline: none;
 }
 
 .sorting {
