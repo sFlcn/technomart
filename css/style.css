@@ -485,6 +485,7 @@ img {
 
 .login-panel__user-orders::after {
   content: "";
+
   position: absolute;
   top: 9px;
   left: 89px;
@@ -1458,6 +1459,22 @@ img {
   background-color: #518534;
   border-bottom: 0;
   border-bottom: 3px solid #367315;
+}
+
+.product--new::after {
+  content: "";
+
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  z-index: 20;
+
+  width: 60px;
+  height: 59px;
+  background-image: url("../img/flag-new.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
 }
 
 .popular-products {
