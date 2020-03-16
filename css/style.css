@@ -1103,32 +1103,34 @@ img {
   content: "";
 
   position: absolute;
-  top: -3px;
-  left: 0;
+  top: -4px;
+  left: -1px;
 
-  width: 27px;
+  width: 28px;
   height: 23px;
 
-  background-image: url(../img/checkbox-on.svg);
+  background-image: url(../img/checkbox-on-2.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 27px 23px;
+  background-size: 28px 23px;
+  opacity: 0.78;
 }
 
 .manufacturers-filter .filters__input + .filters__label::before {
   content: "";
 
   position: absolute;
-  top: -3px;
+  top: -4px;
   left: 0;
 
   width: 23px;
   height: 23px;
 
-  background-image: url(../img/checkbox-off.svg);
+  background-image: url(../img/checkbox-off-2.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 23px 23px;
+  opacity: 0.78;
 }
 
 .power-filter .filters__input:checked + .filters__label::before {
@@ -1141,10 +1143,11 @@ img {
   width: 25px;
   height: 25px;
 
-  background-image: url(../img/radio-on.svg);
+  background-image: url(../img/radio-on-2.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 25px 25px;
+  opacity: 0.78;
 }
 
 .power-filter .filters__input + .filters__label::before {
@@ -1157,15 +1160,24 @@ img {
   width: 25px;
   height: 25px;
 
-  background-image: url(../img/radio-off.svg);
+  background-image: url(../img/radio-off-2.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 25px 25px;
+  opacity: 0.78;
 }
 
-.manufacturers-filter input:disabled + label,
-.power-filter input:disabled + label {
-  color: #000000;
+.filters__input:hover + .filters__label::before,
+.filters__input:focus + .filters__label::before {
+  opacity: 1;
+}
+
+.filters__input:checked:hover + .filters__label::before,
+.filters__input:checked:focus + .filters__label::before {
+  opacity: 1;
+}
+
+.filters__input:disabled + .filters__label {
   opacity: 0.4;
 }
 
@@ -1182,6 +1194,7 @@ img {
   text-transform: uppercase;
 
   border: 1px solid #e5e5e5;
+  background-color: white;
   color: #000000;
 }
 
