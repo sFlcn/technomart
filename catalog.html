@@ -414,10 +414,12 @@
       </div>
     </footer>
 
-    <section class="popup popup--cart">
+    <section class="popup popup--cart" hidden>
       <h2 class="popup__title visuallyhidden">Корзина</h2>
-      <button class="popup-close" type="button" name="cart-popup__close">Закрыть</button>
-      <p class="popup__info">Товар добавлен в корзину!</p>
+      <button class="popup-close" type="button" name="cart-popup__close"><span class="visuallyhidden">Закрыть</span></button>
+      <div class="popup__info-block">
+        <p class="popup__message">Товар добавлен в корзину!</p>
+      </div>
       <ul class="popup-buttons__list">
         <li class="popup-buttons__item"><a class="big-button big-button--red" href="#">Оформить Заказ</a></li>
         <li class="popup-buttons__item"><a class="big-button big-button--white" href="./catalog.html">Продолжить Покупки</a></li>

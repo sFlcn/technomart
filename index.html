@@ -346,7 +346,7 @@
       </div>
     </footer>
 
-    <section class="popup popup--write-us">
+    <section class="popup popup--write-us" hidden>
       <h2 class="popup__title visuallyhidden">Напишите нам</h2>
       <button class="popup-close" type="button" name="write-us__close">Закрыть</button>
       <form class="popup__form" action="https://echo.htmlacademy.ru" method="post">
@@ -366,13 +366,25 @@
       </form>
     </section>
 
-    <section class="popup popup--map">
+    <section class="popup popup--map" hidden>
       <h2 class="popup__title visuallyhidden">Карта</h2>
       <button class="popup-close" type="button" name="map-popup__close">Закрыть</button>
       <div class="popup__big-map">
         <a href="https://yandex.ru/maps/-/CKUmzAj1" target="_blank"><img src="./img/map-big.png" width="940" height="446" alt="город Санкт-Петербург, улица Большая Конюшенная, дом 19/8."></a>
       </div>
-      </section>
+    </section>
+
+    <section class="popup popup--cart" hidden>
+      <h2 class="popup__title visuallyhidden">Корзина</h2>
+      <button class="popup-close" type="button" name="cart-popup__close"><span class="visuallyhidden">Закрыть</span></button>
+      <div class="popup__info-block">
+        <p class="popup__message">Товар добавлен в корзину!</p>
+      </div>
+      <ul class="popup-buttons__list">
+        <li class="popup-buttons__item"><a class="big-button big-button--red" href="#">Оформить Заказ</a></li>
+        <li class="popup-buttons__item"><a class="big-button big-button--white" href="./catalog.html">Продолжить Покупки</a></li>
+      </ul>
+    </section>
 
     <!-- <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p> -->
 

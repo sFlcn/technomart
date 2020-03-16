@@ -45,7 +45,7 @@ img {
 }
 
 .big-button {
-  display: inline-block;
+  display: block;
 
   width: 253px;
   padding-top: 11px;
@@ -1792,9 +1792,103 @@ img {
 /* popups */
 
 .popup {
-  display: none
+  position: relative;
+
+  width: 620px;
+
+  border-top: 7px solid #ff5357;
+  background-color: #ffffff;
 }
 
+.popup-close {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+
+  width: 21px;
+  height: 21px;
+  padding: 0;
+  margin: 0;
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.popup-close::before,
+.popup-close::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  right: -3px;
+  height: 4px;
+  width: 27px;
+  border-radius: 2px;
+  background-color: #ee3643;
+}
+
+.popup-close::before {
+  transform: rotate(45deg);
+}
+
+.popup-close::after {
+  transform: rotate(-45deg);
+}
+
+.popup--cart {
+  -webkit-box-shadow: 0 20px 40px 0 rgba(41, 52, 73, 0.75);
+          box-shadow: 0 20px 40px 0 rgba(41, 52, 73, 0.75);
+}
+
+.popup--cart .popup__info-block {
+  margin: 0;
+  padding-top: 35px;
+  padding-bottom: 38px;
+  padding-left: 179px;
+  padding-right: 35px;
+
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  text-align: left;
+  color: #000000;
+
+  background-image: url("../img/icon-mark.svg");
+  background-repeat: no-repeat;
+  background-position: top 48px left 81px;
+  background-size: 66px;
+}
+
+.popup-buttons__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+  padding: 27px 70px;
+
+  background-color: #f1f1f1;
+
+  list-style: none;
+}
+
+.popup-buttons__item {
+  flex-grow: 1;
+  display: flex;
+  width: 220px;
+  padding: 0;
+  margin: 10px;
+}
+
+.popup-buttons__item .big-button {
+  flex-grow: 1;
+  width: 220px;
+}
+
+.popup--visible {
+  display: block;
+}
 
 /* sliders */
 
