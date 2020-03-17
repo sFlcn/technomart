@@ -1312,6 +1312,7 @@ img {
 
 .product:hover,
 .product:focus {
+  border: 1px solid #ffffff;
   background-color: #ffffff;
   box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
 }
@@ -1517,10 +1518,12 @@ img {
 
 .popular-manufacturers__item:hover,
 .popular-manufacturers__item:focus  {
+  border: 1px solid #ffffff;
   box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
 }
 
 .popular-manufacturers__item:active  {
+  border: 1px solid #ffffff;
   opacity: 0.3;
   box-shadow: 0 4px 10px rgba(41, 52, 73, 0.5);
 }
