@@ -1936,7 +1936,6 @@ img {
   line-height: 18px;
   font-weight: 400;
   color: #000000;
-  /* color: #a9a9a9; */
 
   border: 2px solid #dee3e4;
   border-radius: 3px;
@@ -1951,6 +1950,16 @@ img {
 .popup-form__item input::placeholder,
 .popup-form__item textarea::placeholder {
   color: #a9a9a9;
+}
+
+.popup--map {
+  width: auto;
+  border: none;
+
+  line-height: 0;
+
+  -webkit-box-shadow: 0 0 14.72px 1.28px rgba(47, 42, 43, 0.5);
+          box-shadow: 0 0 14.72px 1.28px rgba(47, 42, 43, 0.5);
 }
 
 .popup--visible {
