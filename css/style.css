@@ -60,6 +60,7 @@ img {
   text-transform: uppercase;
   text-align: center;
 
+  border: none;
   border-radius: 3px;
 
   overflow: hidden;
@@ -1798,6 +1799,8 @@ img {
 
   border-top: 7px solid #ff5357;
   background-color: #ffffff;
+
+  overflow: hidden;
 }
 
 .popup-close {
@@ -1884,6 +1887,70 @@ img {
 .popup-buttons__item .big-button {
   flex-grow: 1;
   width: 220px;
+}
+
+.popup--write-us {
+  -webkit-box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
+          box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
+}
+
+.popup--write-us .popup__info-block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0;
+  padding-top: 37px;
+  padding-bottom: 26px;
+  padding-left: 70px;
+  padding-right: 70px;
+
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 400;
+  text-align: left;
+  color: #000000;
+}
+
+.popup-form__item {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 11px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.popup-form__item label {
+  margin-bottom: 9px;
+  padding-left: 1px;
+}
+
+.popup-form__item input,
+.popup-form__item textarea {
+  padding: 8px 14px;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #000000;
+  /* color: #a9a9a9; */
+
+  border: 2px solid #dee3e4;
+  border-radius: 3px;
+}
+
+.popup-form__item textarea {
+  padding-bottom: 12px;
+
+  resize: vertical;
+}
+
+.popup-form__item input::placeholder,
+.popup-form__item textarea::placeholder {
+  color: #a9a9a9;
 }
 
 .popup--visible {
