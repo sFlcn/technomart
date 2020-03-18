@@ -93,24 +93,26 @@
               <a href="#" class="feature__link">для стройки</a>
             </li>
             <li class="promo__item pr-slider">
-              <div class="pr-slider__control">
-                <input class="visuallyhidden" type="radio" id="pr-slider-1" name="pr-slider-toggle" checked>
-                <label for="pr-slider-1">Промо — Перфораторы</label>
-                <input class="visuallyhidden" type="radio" id="pr-slider-2" name="pr-slider-toggle">
-                <label for="pr-slider-2">Промо — Дрели</label>
-                <button class="pr-slider__button pr-slider__button--previous" type="button" name="prslider__button--previous">˂</button>
-                <button class="pr-slider__button pr-slider__button--next" type="button" name="prslider__button--next">˃</button>
-              </div>
               <ul class="pr-slider__list">
-                <li class="pr-slider__item pr-slide pr-slide--1">
+                <li class="pr-slider__item pr-slide">
+                  <h3 class="pr-slide__title">Перфораторы</h3>
+                  <p class="pr-slide__text">Настоящие мужские игрушки</p>
+                  <a class="pr-slide__button big-button big-button--red" href="./catalog.html">Открыть Каталог</a>
+                </li>
+                <li class="pr-slider__item pr-slide pr-slide--show">
                   <h3 class="pr-slide__title">Дрели</h3>
                   <p class="pr-slide__text">Соседям на радость!</p>
                   <a class="pr-slide__button big-button big-button--red" href="./catalog.html">Открыть Каталог</a>
                 </li>
-                <li class="pr-slider__item pr-slide pr-slide--2">
-                  <h3 class="pr-slide__title">Перфораторы</h3>
-                  <p class="pr-slide__text">Настоящие мужские игрушки</p>
-                  <a class="pr-slide__button big-button big-button--red" href="./catalog.html">Открыть Каталог</a>
+              </ul>
+              <button class="pr-slider__button pr-slider__button--next" type="button" name="prslider__button--next"><span class="visuallyhidden">Следующий слайд</span></button>
+              <button class="pr-slider__button pr-slider__button--previous" type="button" name="prslider__button--previous"><span class="visuallyhidden">Предыдущий слайд</span></button>
+              <ul class="pr-slider__markers-list">
+                <li class="pr-slider__markers-item">
+                  <button class="pr-slider__marker" type="button" name="Slide-1"><span class="visuallyhidden">Слайд номер 1</span></button>
+                </li>
+                  <li class="pr-slider__markers-item pr-slider__markers-item--current">
+                  <button class="pr-slider__marker" type="button" name="Slide-2"><span class="visuallyhidden">Слайд номер 2</span></button>
                 </li>
               </ul>
             </li>

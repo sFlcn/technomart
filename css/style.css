@@ -1977,6 +1977,10 @@ img {
 
 /* sliders */
 
+.pr-slider {
+  position: relative;
+}
+
 .pr-slider__list {
   padding: 0;
 
@@ -1984,20 +1988,126 @@ img {
 }
 
 .pr-slide {
+  position: relative;
+
+  display: none;
+  padding: 21px 24px;
+  margin: 0;
   width: 620px;
   height: 266px;
 
-  background: #9e8f80 url("../img/slider-drill.jpg") no-repeat;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  text-transform: none;
+  color: #ffffff;
+
+  background-color: #9e8f80;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
-.pr-slide--1 {
-  background: #9e8f80 url("../img/slider-drill.jpg") no-repeat;
+.pr-slide__title {
+  margin: 2px 0;
+
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
-.pr-slide--2 {
-  display: none;
+.pr-slide__text {
+  margin: 2px 1px;
+}
 
-  background: #9e8f80 url("../img/slider-perforator.jpg") no-repeat;
+.pr-slider__item .pr-slide__button {
+  position: absolute;
+  bottom: 22px;
+  left: 25px;
+
+  width: 195px;
+  padding-left: 25px;
+}
+
+.pr-slide:nth-of-type(1) {
+  background-image: url("../img/slider-perforator.jpg");
+}
+
+.pr-slide:nth-of-type(2) {
+  background-image: url("../img/slider-drill.jpg");
+}
+
+.pr-slide--show {
+  display: block;
+}
+
+.pr-slider__markers-list {
+  position: absolute;
+  bottom: 64px;
+  left: 295px;
+
+  display: flex;
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.pr-slider__markers-item{
+  margin-right: 10px;
+}
+
+.pr-slider__marker {
+  position: relative;
+
+  display: flex;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+
+  border: 0;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.pr-slider__markers-item--current .pr-slider__marker::after {
+  content: "";
+
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 6px;
+  height: 6px;
+  border: 0;
+  border-radius: 50%;
+  background-color: #ee3643;
+}
+
+.pr-slider__button {
+  position: absolute;
+  top: 114px;
+
+  width: 22px;
+  height: 40px;
+  border: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.pr-slider__button--next {
+  right: 20px;
+  background-image: url("../img/icon-right.svg");
+}
+
+.pr-slider__button--previous {
+  left: 25px;
+  background-image: url("../img/icon-left.svg");
 }
 
 .service-slider {
