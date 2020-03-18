@@ -1099,6 +1099,8 @@ img {
   position: relative;
 
   padding-left: 34px;
+
+  cursor: pointer;
 }
 
 .manufacturers-filter .filters__input:checked + .filters__label::before {
@@ -1198,6 +1200,8 @@ img {
   border: 1px solid #e5e5e5;
   background-color: white;
   color: #000000;
+
+  cursor: pointer;
 }
 
 .filters__button:hover,
@@ -1422,6 +1426,8 @@ img {
 
   color: #32425c;
   background-color: #ffffff;
+
+  cursor: pointer;
 }
 
 .product__button--bookmark {
