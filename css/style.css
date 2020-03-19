@@ -2141,11 +2141,11 @@ img {
 }
 
 .pr-slide:nth-of-type(1) {
-  background-image: url("../img/slider-perforator.jpg");
+  background-image: url("../img/slider-1.jpg");
 }
 
 .pr-slide:nth-of-type(2) {
-  background-image: url("../img/slider-drill.jpg");
+  background-image: url("../img/slider-2.jpg");
 }
 
 .pr-slide--show {
