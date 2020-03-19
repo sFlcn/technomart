@@ -246,27 +246,30 @@
           <p class="section-text">
             Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           </p>
-          <div class="service__slider service-slider">
-            <div class="service-slider__control">
-              <input class="visuallyhidden" type="radio" id="service-slider--delivery" name="service-slider-toggle" checked>
-              <label for="service-slider--delivery" class="service-slider__option">Доставка</label>
-              <input class="visuallyhidden" type="radio" id="service-slider--guarantee" name="service-slider-toggle">
-              <label for="service-slider--guarantee" class="service-slider__option">Гарантия</label>
-              <input class="visuallyhidden" type="radio" id="service-slider--credit" name="service-slider-toggle">
-              <label for="service-slider--credit" class="service-slider__option">Кредит</label>
-            </div>
-            <ul class="service-slider__list">
-              <li class="service-slider__item service-slide service-slide--active" id="service-slide--delivery">
+          <div class="service__slider serv-slider">
+            <ul class="serv-slider__control-list">
+              <li class="serv-slider__control-item">
+                <button class="serv-slider__button serv-slider__button--active" type="button" name="serv-slider__button--delivery">Доставка</button>
+              </li>
+              <li class="serv-slider__control-item">
+                <button class="serv-slider__button" type="button" name="serv-slider__button--guarantee">Гарантия</button>
+              </li>
+              <li class="serv-slider__control-item">
+                <button class="serv-slider__button" type="button" name="serv-slider__button--credit">Кредит</button>
+              </li>
+            </ul>
+            <ul class="serv-slider__list">
+              <li class="serv-slider__item service-slide service-slide--delivery service-slide--active">
                 <h3 class="service-slide__title">Доставка</h3>
                 <p class="service-slide__text">Мы с удовольствием доставим ваш товар прямо <br>к вашему подъезду совершенно бесплатно!</p>
                 <p class="service-slide__text">Ведь мы неплохо заработаем, <br>поднимая его на ваш этаж!</p>
               </li>
-              <li class="service-slider__item service-slide" id="service-slide--guarantee">
+              <li class="serv-slider__item service-slide service-slide--guarantee">
                 <h3 class="service-slide__title">Гарантия</h3>
                 <p class="service-slide__text">Если купленный у нас товар поломается или заискрит, <br>а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.</p>
                 <p class="service-slide__text">Дом уж восстановите как-нибудь сами.</p>
               </li>
-              <li class="service-slider__item service-slide" id="service-slide--credit">
+              <li class="serv-slider__item service-slide service-slide--credit">
                 <h3 class="service-slide__title">Кредит</h3>
                 <p class="service-slide__text">Залезть в долговую яму стало проще! <br>Кредитные консультанты придут вам на помощь.</p>
                 <a href="#" class="service-slide__link big-button big-button--red">отправить заявку</a>
