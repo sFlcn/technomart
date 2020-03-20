@@ -1957,6 +1957,13 @@ img {
 }
 
 .popup--cart {
+  position: fixed;
+  top: 35%;
+  left: 50%;
+  z-index: 130;
+
+  margin-left: -310px;
+
   -webkit-box-shadow: 0 20px 40px 0 rgba(41, 52, 73, 0.75);
           box-shadow: 0 20px 40px 0 rgba(41, 52, 73, 0.75);
 }
@@ -2008,6 +2015,13 @@ img {
 }
 
 .popup--write-us {
+  position: fixed;
+  top: 32%;
+  left: 50%;
+  z-index: 120;
+
+  margin-left: -310px;
+
   -webkit-box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
           box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75);
 }
@@ -2071,10 +2085,17 @@ img {
 }
 
 .popup--map {
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  z-index: 100;
+
   width: auto;
-  border: none;
+  margin-left: -470px;
 
   line-height: 0;
+
+  border: none;
 
   -webkit-box-shadow: 0 0 14.72px 1.28px rgba(47, 42, 43, 0.5);
           box-shadow: 0 0 14.72px 1.28px rgba(47, 42, 43, 0.5);
