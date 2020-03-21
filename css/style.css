@@ -2289,10 +2289,8 @@ img {
   justify-content: flex-start;
   flex-wrap: wrap;
 
+  padding: 0;
   padding-top: 21px;
-  padding-bottom: 50px;
-  padding-left: 0;
-  padding-right: 0;
 }
 
 .serv-slider__control-list,
@@ -2312,7 +2310,8 @@ img {
 .serv-slider__list {
   flex-grow: 1;
   margin: 0;
-  padding: 11px 0;
+  padding: 0;
+  padding-top: 11px;
 }
 
 .serv-slider__button {
@@ -2375,7 +2374,7 @@ img {
 .service-slide {
   display: none;
   width: 100%;
-  min-height: 238px;
+  min-height: 321px;
 
   margin: 0 80px;
   padding: 10px 0;
