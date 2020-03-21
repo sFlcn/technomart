@@ -1494,6 +1494,15 @@ img {
   background-size: cover;
 }
 
+.product__price--new:hover,
+.product__price--new:focus {
+  opacity: 0.9;
+}
+
+.product__price--new:active {
+  opacity: 0.2;
+}
+
 .product__price--old {
   margin-top: auto;
   margin-bottom: 9px;
@@ -1521,6 +1530,7 @@ img {
   background-color: rgba(255, 255, 255, 1);
 }
 
+.product:focus-within .product-buttons__list,
 .product:hover .product-buttons__list {
   display: block;
 }
