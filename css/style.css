@@ -40,8 +40,8 @@ img {
 }
 
 .wrapper {
-  padding: 0 10px;
   margin: 0 auto;
+  padding: 0 10px;
   width: 960px;
 }
 
@@ -261,9 +261,9 @@ img {
 
   flex-grow: 1;
   display: flex;
-  padding-top: 0px;
   margin-left: 0;
   margin-right: auto;
+  padding-top: 0px;
 }
 
 .header__button-search-icon {
@@ -341,10 +341,10 @@ img {
 
 .header__info {
   max-width: 269px;
+  margin: 0;
   padding-top: 3px;
   padding-left: 52px;
   padding-right: 20px;
-  margin: 0;
 
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 16px;
@@ -429,8 +429,8 @@ img {
 
   min-width: 121px;
   min-height: 45px;
-  padding-left: 47px;
   margin-right: 10px;
+  padding-left: 47px;
 }
 
 .login-panel__enter svg {
@@ -687,11 +687,11 @@ img {
 
 .main__title,
 .section-title {
-  padding-top: 30px;
   margin-top: 0;
   margin-bottom: 26px;
   margin-left: 0;
   margin-right: 0;
+  padding-top: 30px;
 
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
@@ -711,9 +711,9 @@ img {
   justify-content: space-between;
   align-items: flex-start;
   min-height: 89px;
+  margin-bottom: 20px;
   padding-left: 28px;
   padding-right: 24px;
-  margin-bottom: 20px;
   -webkit-font-kerning: auto;
           font-kerning: auto;
 
@@ -751,8 +751,8 @@ img {
 
   width: 300px;
   height: 123px;
-  padding: 22px;
   margin-bottom: 20px;
+  padding: 22px;
 
   background-color: #9e8f80;
 
@@ -824,9 +824,9 @@ img {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 0;
   margin: 0;
   margin-bottom: 33px;
+  padding: 0;
 
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
@@ -848,8 +848,8 @@ img {
   justify-content: center;
   width: 135px;
   min-height: 38px;
-  padding-top: 11px;
   margin: 11px 1px;
+  padding-top: 11px;
 
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
@@ -903,8 +903,9 @@ img {
 
 .transport__list {
   list-style: none;
-  padding-left: 36px;
   margin-bottom: 16px;
+  padding-left: 36px;
+
 }
 
 .transport__item {
@@ -972,11 +973,11 @@ img {
 }
 
 .filters__title {
+  margin-top: 0;
+  margin-bottom: 12px;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 19px;
-  margin-top: 0;
-  margin-bottom: 12px;
 
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
@@ -1015,9 +1016,9 @@ img {
 }
 
 .price-filter {
-  padding: 0;
   margin: 0;
   margin-bottom: 17px;
+  padding: 0;
 
   border: none;
   border-bottom: 1px solid #e5e5e5;
@@ -1121,19 +1122,19 @@ img {
 }
 
 .manufacturers-filter {
-  padding: 0;
-  padding-bottom: 1px;
   margin: 0;
   margin-bottom: 18px;
+  padding: 0;
+  padding-bottom: 1px;
 
   border: none;
   border-bottom: 1px solid #e5e5e5;
 }
 
 .power-filter {
-  padding: 0;
   margin: 0;
   margin-bottom: 57px;
+  padding: 0;
 
   border: none;
 }
@@ -1307,9 +1308,9 @@ img {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  padding-bottom: 3px;
   margin-right: 29px;
   margin-left: auto;
+  padding-bottom: 3px;
 }
 
 .sorting__item {
@@ -1317,11 +1318,11 @@ img {
 }
 
 .sorting__title {
+  margin: 0;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 19px;
   padding-right: 20px;
-  margin: 0;
 
   font-size: 13px;
   line-height: 18px;
@@ -1407,8 +1408,8 @@ img {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 0;
   margin: 0;
+  padding: 0;
 
   list-style: none;
 }
@@ -1661,8 +1662,8 @@ img {
 
 .pagination__list {
   display: flex;
-  padding: 0;
   margin-bottom: 60px;
+  padding: 0;
 
   list-style: none;
 }
@@ -1678,11 +1679,11 @@ img {
   min-width: 8px;
   border: 1px solid #e5e5e5;
   border-radius: 3px;
+  margin-right: 10px;
   padding-top: 9px;
   padding-bottom: 9px;
   padding-left: 15px;
   padding-right: 14px;
-  margin-right: 10px;
 
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
@@ -1778,8 +1779,8 @@ img {
   flex-direction: row;
   justify-content: flex-end;
   flex-wrap: wrap;
-  padding: 0;
   margin: 0;
+  padding: 0;
 
   list-style: none;
 }
@@ -1835,8 +1836,8 @@ img {
 
 .footer__copyrights {
   width: 240px;
-  padding: 0 1px;
   margin: 3px 0;
+  padding: 0 1px;
 }
 
 .socials__list {
@@ -1844,11 +1845,11 @@ img {
   justify-content: space-around;
   flex-wrap: wrap;
   width: 135px;
-  padding: 0;
   margin-top: 1px;
   margin-bottom: 1px;
   margin-left: 148px;
   margin-right: 115px;
+  padding: 0;
 
   text-align: center;
   list-style: none;
@@ -1948,8 +1949,8 @@ img {
 
   width: 21px;
   height: 21px;
-  padding: 0;
   margin: 0;
+  padding: 0;
 
   border: none;
   background-color: transparent;
@@ -2027,8 +2028,8 @@ img {
   flex-grow: 1;
   display: flex;
   width: 220px;
-  padding: 0;
   margin: 10px;
+  padding: 0;
 }
 
 .popup-buttons__item .big-button {
@@ -2163,8 +2164,8 @@ img {
   position: relative;
 
   display: none;
-  padding: 21px 24px;
   margin: 0;
+  padding: 21px 24px;
   width: 620px;
   height: 266px;
 
@@ -2221,8 +2222,8 @@ img {
   left: 295px;
 
   display: flex;
-  padding: 0;
   margin: 0;
+  padding: 0;
 
   list-style: none;
 }
@@ -2302,16 +2303,16 @@ img {
 .serv-slider__control-list {
   position: relative;
 
-  padding: 0;
   margin: 48px 0;
+  padding: 0;
 
   align-self: flex-start;
 }
 
 .serv-slider__list {
   flex-grow: 1;
-  padding: 11px 0;
   margin: 0;
+  padding: 11px 0;
 }
 
 .serv-slider__button {
@@ -2376,8 +2377,8 @@ img {
   width: 100%;
   min-height: 238px;
 
-  padding: 10px 0;
   margin: 0 80px;
+  padding: 10px 0;
 
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
