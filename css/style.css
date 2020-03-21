@@ -11,7 +11,8 @@ body {
   font-weight: 400;
   color: #000000;
   text-transform: none;
-  font-kerning: none;
+  -webkit-font-kerning: none;
+          font-kerning: none;
 
   background-color: #ffffff;
 }
@@ -158,11 +159,11 @@ img {
 
 .header__button:hover,
 .header__button:focus {
-  background-color:   #212a3a;
+  background-color: #212a3a;
 }
 .header__button:active {
   color: rgba(255, 255, 255, 0.6);
-  background-color:   #161d29;
+  background-color: #161d29;
 }
 
 .header__button-bookmarks {
@@ -318,15 +319,25 @@ img {
   outline: none;
 }
 
-.header__button-search-field:-ms-input-placeholder { /* Internet Explorer 10-11 */
+.header__button-search-field::-webkit-input-placeholder {
   color: #ffffff;
+  opacity: 1;
 }
-.header__button-search-field::-ms-input-placeholder { /* Microsoft Edge */
+.header__button-search-field::-moz-placeholder {
   color: #ffffff;
+  opacity: 1;
 }
-.header__button-search-field::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+.header__button-search-field:-ms-input-placeholder {
   color: #ffffff;
-  opacity: 1; /* Firefox */
+  opacity: 1;
+}
+.header__button-search-field::-ms-input-placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+.header__button-search-field::placeholder {
+  color: #ffffff;
+  opacity: 1;
 }
 
 .header__middle {
@@ -713,7 +724,8 @@ img {
   padding-left: 28px;
   padding-right: 24px;
   margin-bottom: 20px;
-  font-kerning: auto;
+  -webkit-font-kerning: auto;
+          font-kerning: auto;
 
   background-color: #f9f5f0;
 }
@@ -1949,11 +1961,13 @@ img {
 }
 
 .popup-close::before {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .popup-close::after {
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .popup--cart {
@@ -2077,6 +2091,26 @@ img {
   padding-bottom: 12px;
 
   resize: vertical;
+}
+
+.popup-form__item input::-webkit-input-placeholder,
+.popup-form__item textarea::-webkit-input-placeholder {
+  color: #a9a9a9;
+}
+
+.popup-form__item input::-moz-placeholder,
+.popup-form__item textarea::-moz-placeholder {
+  color: #a9a9a9;
+}
+
+.popup-form__item input:-ms-input-placeholder,
+.popup-form__item textarea:-ms-input-placeholder {
+  color: #a9a9a9;
+}
+
+.popup-form__item input::-ms-input-placeholder,
+.popup-form__item textarea::-ms-input-placeholder {
+  color: #a9a9a9;
 }
 
 .popup-form__item input::placeholder,
