@@ -1724,6 +1724,10 @@ img {
   background-color: #ee3643;
 }
 
+.pagination__item--removed {
+  display: none;
+}
+
 .about-product {
   padding-top: 35px;
   padding-bottom: 68px;
