@@ -92,6 +92,7 @@ img {
 
   display: inline-block;
   width: 220px;
+  vertical-align: top;
 
   text-align: center;
 
@@ -1127,6 +1128,8 @@ img {
   position: relative;
 
   display: inline-block;
+
+  vertical-align: top;
 }
 
 .price-filter__price-controls {
@@ -1376,6 +1379,8 @@ img {
 .sorting__item a {
   display: inline-block;
   padding-top: 5.7px;
+
+  vertical-align: top;
 
   line-height: 14px;
   text-decoration: none;
