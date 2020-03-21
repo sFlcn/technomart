@@ -742,6 +742,10 @@ img {
   color: #000000;
 }
 
+.section-text--wider {
+  word-spacing: 1px;
+}
+
 .promo {
   margin-top: 59px;
 }
