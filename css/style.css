@@ -88,6 +88,8 @@ img {
 
 .header__logo,
 .footer__logo {
+  z-index: 10;
+
   display: inline-block;
   width: 220px;
 
@@ -255,6 +257,8 @@ img {
 }
 
 .header__button-search {
+  position: relative;
+
   flex-grow: 1;
   display: flex;
   padding-top: 0px;
@@ -262,34 +266,20 @@ img {
   margin-right: auto;
 }
 
-.header__button-search-label {
-  padding-top: 10px;
-  padding-left: 17px;
-  padding-right: 13px;
-}
+.header__button-search-icon {
+  position: absolute;
+  top: 29%;
+  left: 17px;
 
-.header__button-search-label:active {
-  background-color: #ffffff;
-}
-
-.header__button-search-label:active path {
-  fill: #ee3643;
-}
-
-.header__button-search-icon path {
   fill: #ffffff;
   opacity: 0.3;
 }
 
-.header__button-search:hover .header__button-search-icon path {
+.header__button-search-field:hover ~ .header__button-search-icon {
   opacity: 1;
 }
 
-.header__button-search-field:focus + .header__button-search-label {
-  background-color: #ffffff;
-}
-
-.header__button-search-field:focus + .header__button-search-label path {
+.header__button-search-field:focus ~ .header__button-search-icon {
   fill: #ee3643;
   opacity: 1;
 }
@@ -297,7 +287,7 @@ img {
 .header__button-search-field {
   order: 2;
   width: 100%;
-  min-height: 42px;
+  padding-left: 48px;
 
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 17px;
@@ -513,26 +503,26 @@ img {
   margin-right: 72px;
 }
 
-.login-panel__enter a:hover,
+.login-panel__enter-link:hover,
 .login-panel__registration a:hover,
-.login-panel__enter a:focus,
+.login-panel__enter-link:focus,
 .login-panel__registration a:focus {
   color: rgba(238, 54, 67, 1);
 }
-.login-panel__enter a:active,
+.login-panel__enter-link:active,
 .login-panel__registration a:active,
-.login-panel__user-name a:active {
+.login-panel__user-name-link:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.login-panel__user-name a:hover path,
-.login-panel__user-name a:focus path,
-.login-panel__enter a:hover path,
-.login-panel__enter a:focus path {
+.login-panel__user-name-link:hover path,
+.login-panel__user-name-link:focus path,
+.login-panel__enter-link:hover path,
+.login-panel__enter-link:focus path {
   fill: #32425c;
 }
-.login-panel__user-name a:active path,
-.login-panel__enter a:active path {
+.login-panel__user-name-link:active path,
+.login-panel__enter-link:active path {
   fill: #c5c5c5;
 }
 
