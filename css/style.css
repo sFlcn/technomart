@@ -1253,9 +1253,7 @@ img {
 }
 
 .filters__input:focus + .filters__label::before {
-  outline-width: 2px;
-  outline-style: solid;
-  outline-color: Highlight;
+  box-shadow: 0 0 1px 2px rgba(0, 131, 255, 0.7);
 }
 
 .filters__button {
