@@ -2192,11 +2192,14 @@ img {
   left: 50%;
   z-index: 100;
 
+  min-width: 940px;
+  min-height: 446px;
   width: auto;
   margin-left: -470px;
 
   line-height: 0;
 
+  background-color: #efebe3;
   border: none;
 
   box-shadow: 0 0 14.72px 1.28px rgba(47, 42, 43, 0.5);
