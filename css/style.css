@@ -1553,6 +1553,8 @@ img {
   min-height: 38px;
 
   color: #ffffff;
+  text-shadow: 0 0 7px #ee3643;
+
   background: url("../img/red-button2.svg") no-repeat;
   background-size: 100% 100%;
 }
