@@ -238,11 +238,11 @@ img {
 
 .header__button-checkout:hover,
 .header__button-checkout:focus {
-  background-color:   #5fbb2d;
+  background-color: #5fbb2d;
 }
 .header__button-checkout:active {
   color: rgba(255, 255, 255, 0.5);
-  background-color:   #518534;
+  background-color: #518534;
 }
 
 .header__button--red {
@@ -251,11 +251,11 @@ img {
 
 .header__button--red:hover,
 .header__button--red:focus {
-  background-color:   #ca2c37;
+  background-color: #ca2c37;
 }
 .header__button--red:active {
   color: rgba(255, 255, 255, 0.5);
-  background-color:   #ba2732;
+  background-color: #ba2732;
 }
 
 .header__button-search {
@@ -1926,31 +1926,26 @@ img {
   height: 41px;
   margin-bottom: 5px;
 
+  text-decoration: none;
+
   border-radius: 50%;
   color: #ffffff;
   background-color: #212a3a;
-  text-decoration: none;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
 }
 
 .socials__link--vk {
   background-image: url("../img/icon-vk.svg");
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: center;
 }
 
 .socials__link--fb {
   background-image: url("../img/icon-fb.svg");
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: center;
 }
 
 .socials__link--insta {
   background-image: url("../img/icon-insta.svg");
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: center;
 }
 
 .socials__item:hover,
