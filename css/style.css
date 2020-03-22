@@ -2030,11 +2030,11 @@ img {
 
 .popup-close {
   position: absolute;
-  top: 9px;
-  right: 9px;
+  top: 0px;
+  right: 0px;
 
-  width: 21px;
-  height: 21px;
+  width: 39px;
+  height: 39px;
   margin: 0;
   padding: 0;
 
@@ -2047,8 +2047,8 @@ img {
 .popup-close::after {
   content: "";
   position: absolute;
-  top: 9px;
-  right: -3px;
+  top: 18px;
+  right: 6px;
   height: 4px;
   width: 27px;
   border-radius: 2px;
@@ -2063,6 +2063,18 @@ img {
 .popup-close::after {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+
+.popup-close:hover::before,
+.popup-close:hover::after,
+.popup-close:focus::before,
+.popup-close:focus::after {
+  background-color: #ca2c37;
+}
+
+.popup-close:active::before,
+.popup-close:active::after {
+  background-color: #ba2732;
 }
 
 .popup--cart {
