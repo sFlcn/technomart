@@ -43,6 +43,15 @@ if (popupWriteUs) {
       }
     }
   });
+
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (!(popupWriteUs.hasAttribute("hidden"))) {
+        popupWriteUs.setAttribute("hidden","");
+      }
+    }
+  });
 }
 
 // Карта
@@ -60,6 +69,15 @@ if (popupMap) {
   popupMapClose.addEventListener("click", function (evt) {
     evt.preventDefault();
     popupMap.setAttribute("hidden","");
+  });
+
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (!(popupMap.hasAttribute("hidden"))) {
+        popupMap.setAttribute("hidden","");
+      }
+    }
   });
 }
 
@@ -86,6 +104,15 @@ if (popupAddToCart) {
   popupAddToCartContinue.addEventListener("click", function (evt) {
     evt.preventDefault();
     popupAddToCart.setAttribute("hidden","");
+  });
+
+  window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+      evt.preventDefault();
+      if (!(popupAddToCart.hasAttribute("hidden"))) {
+        popupAddToCart.setAttribute("hidden","");
+      }
+    }
   });
 }
 
