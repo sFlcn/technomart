@@ -1638,6 +1638,8 @@ img {
 }
 
 .product__button--buy {
+  position: relative;
+
   padding-top: 11px;
   padding-bottom: 6px;
   padding-right: 3px;
@@ -1656,7 +1658,30 @@ img {
 .product__button--buy:active {
   background-color: #518534;
   border-bottom: 0;
-  border-bottom: 3px solid #367315;
+  border-bottom: 3px solid #518534;
+}
+
+.product__button--buy::before {
+  content: "";
+
+  position: absolute;
+  left: 14px;
+  top: 11px;
+
+  width: 15px;
+  height: 15px;
+
+  background-image: url("../img/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.3;
+}
+
+.product__button--buy:hover::before ,
+.product__button--buy:focus::before ,
+.product__button--buy:active::before {
+  opacity: 1;
 }
 
 .product--new::after {
