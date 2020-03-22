@@ -47,7 +47,7 @@ img {
 
 .big-button {
   display: block;
-
+  flex-shrink: 0;
   width: 253px;
   padding-top: 11px;
   padding-bottom: 9px;
