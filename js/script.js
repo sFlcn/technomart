@@ -17,9 +17,12 @@ if (popupWriteUs) {
       isStorageSupport = false;
     }
 
+  messageWriteUs.removeAttribute("required");
+
   buttonWriteUs.addEventListener("click", function (evt) {
     evt.preventDefault();
     popupWriteUs.removeAttribute("hidden");
+    popupWriteUs.classList.add("popup-show");
     if (storage) {
       messageNameWriteUs.value = storage;
       messageEmailWriteUs.focus();
@@ -31,12 +34,16 @@ if (popupWriteUs) {
   popupWriteUsClose.addEventListener("click", function (evt) {
     evt.preventDefault();
     popupWriteUs.setAttribute("hidden","");
+    popupWriteUs.classList.remove("popup-show");
   });
 
   formWriteUs.addEventListener("submit", function (evt) {
     if (!messageWriteUs.value) {
       evt.preventDefault();
-      console.log("Нужно ввести логин и пароль");
+      messageWriteUs.classList.remove("popup--write-us-required");
+      messageWriteUs.offsetWidth = messageWriteUs.offsetWidth;
+      messageWriteUs.focus();
+      messageWriteUs.classList.add("popup--write-us-required");
     } else {
       if (isStorageSupport) {
         localStorage.setItem("messageNameWriteUs", messageNameWriteUs.value);
@@ -49,6 +56,7 @@ if (popupWriteUs) {
       evt.preventDefault();
       if (!(popupWriteUs.hasAttribute("hidden"))) {
         popupWriteUs.setAttribute("hidden","");
+        popupWriteUs.classList.remove("popup-show");
       }
     }
   });
@@ -64,11 +72,13 @@ if (popupMap) {
   buttonMap.addEventListener("click", function (evt) {
     evt.preventDefault();
     popupMap.removeAttribute("hidden");
+    popupMap.classList.add("popup-show");
   });
 
   popupMapClose.addEventListener("click", function (evt) {
     evt.preventDefault();
     popupMap.setAttribute("hidden","");
+    popupMap.classList.remove("popup-show");
   });
 
   window.addEventListener("keydown", function (evt) {
@@ -76,6 +86,7 @@ if (popupMap) {
       evt.preventDefault();
       if (!(popupMap.hasAttribute("hidden"))) {
         popupMap.setAttribute("hidden","");
+        popupMap.classList.remove("popup-show");
       }
     }
   });
@@ -93,17 +104,20 @@ if (popupAddToCart) {
     buttonsAddToCart[i].addEventListener("click", function (evt) {
       evt.preventDefault();
       popupAddToCart.removeAttribute("hidden");
+      popupAddToCart.classList.add("popup-show");
     });
   }
 
   popupAddToCartClose.addEventListener("click", function (evt) {
     evt.preventDefault();
     popupAddToCart.setAttribute("hidden","");
+    popupAddToCart.classList.remove("popup-show");
   });
 
   popupAddToCartContinue.addEventListener("click", function (evt) {
     evt.preventDefault();
     popupAddToCart.setAttribute("hidden","");
+    popupAddToCart.classList.remove("popup-show");
   });
 
   window.addEventListener("keydown", function (evt) {
@@ -111,6 +125,7 @@ if (popupAddToCart) {
       evt.preventDefault();
       if (!(popupAddToCart.hasAttribute("hidden"))) {
         popupAddToCart.setAttribute("hidden","");
+        popupAddToCart.classList.remove("popup-show");
       }
     }
   });
@@ -146,3 +161,8 @@ if (document.querySelector(".login-panel")) {
   });
 
 }
+
+// Промо-слайдер
+
+var firstSlide = document.querySelector(".pr-slide:nth-child(1)");
+var secondSlide = document.querySelector(".pr-slide:nth-child(2)");
