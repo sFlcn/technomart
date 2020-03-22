@@ -18,6 +18,8 @@ if (popupWriteUs) {
     }
 
   messageWriteUs.removeAttribute("required");
+  messageNameWriteUs.removeAttribute("required");
+  messageEmailWriteUs.removeAttribute("required");
 
   buttonWriteUs.addEventListener("click", function (evt) {
     evt.preventDefault();
@@ -38,12 +40,16 @@ if (popupWriteUs) {
   });
 
   formWriteUs.addEventListener("submit", function (evt) {
-    if (!messageWriteUs.value) {
+    if (!messageWriteUs.value || !messageNameWriteUs.value || !messageEmailWriteUs.value) {
       evt.preventDefault();
       messageWriteUs.classList.remove("popup--write-us-required");
+      messageNameWriteUs.classList.remove("popup--write-us-required");
+      messageEmailWriteUs.classList.remove("popup--write-us-required");
       messageWriteUs.offsetWidth = messageWriteUs.offsetWidth;
       messageWriteUs.focus();
       messageWriteUs.classList.add("popup--write-us-required");
+      messageNameWriteUs.classList.add("popup--write-us-required");
+      messageEmailWriteUs.classList.add("popup--write-us-required");
     } else {
       if (isStorageSupport) {
         localStorage.setItem("messageNameWriteUs", messageNameWriteUs.value);
@@ -161,8 +167,3 @@ if (document.querySelector(".login-panel")) {
   });
 
 }
-
-// Промо-слайдер
-
-var firstSlide = document.querySelector(".pr-slide:nth-child(1)");
-var secondSlide = document.querySelector(".pr-slide:nth-child(2)");
