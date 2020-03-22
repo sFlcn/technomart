@@ -180,3 +180,48 @@ if (document.querySelector(".login-panel")) {
   });
 
 }
+
+// Слайдер сервисов
+
+var sliderService = document.querySelector(".serv-slider");
+if (sliderService) {
+  var buttonServDelivery = sliderService.querySelector("[name=serv-slider__button--delivery]");
+  var buttonServGuarantee = sliderService.querySelector("[name=serv-slider__button--guarantee]");
+  var buttonServCredit = sliderService.querySelector("[name=serv-slider__button--credit]");
+  var slideServDelivery = sliderService.querySelector(".service-slide--delivery");
+  var slideServGuarantee = sliderService.querySelector(".service-slide--guarantee");
+  var slideServCredit = sliderService.querySelector(".service-slide--credit");
+
+  buttonServDelivery.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    buttonServDelivery.classList.add("serv-slider__button--active");
+    slideServDelivery.classList.add("service-slide--active");
+    buttonServGuarantee.classList.remove("serv-slider__button--active");
+    slideServGuarantee.classList.remove("service-slide--active");
+    buttonServCredit.classList.remove("serv-slider__button--active");
+    slideServCredit.classList.remove("service-slide--active");
+    document.activeElement.blur()
+  });
+
+  buttonServGuarantee.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    buttonServGuarantee.classList.add("serv-slider__button--active");
+    slideServGuarantee.classList.add("service-slide--active");
+    buttonServDelivery.classList.remove("serv-slider__button--active");
+    slideServDelivery.classList.remove("service-slide--active");
+    buttonServCredit.classList.remove("serv-slider__button--active");
+    slideServCredit.classList.remove("service-slide--active");
+    document.activeElement.blur()
+  });
+
+  buttonServCredit.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    buttonServCredit.classList.add("serv-slider__button--active");
+    slideServCredit.classList.add("service-slide--active");
+    buttonServDelivery.classList.remove("serv-slider__button--active");
+    slideServDelivery.classList.remove("service-slide--active");
+    buttonServGuarantee.classList.remove("serv-slider__button--active");
+    slideServGuarantee.classList.remove("service-slide--active");
+    document.activeElement.blur()
+  });
+}
