@@ -105,12 +105,25 @@ if (popupAddToCart) {
   var buttonsAddToCart = document.querySelectorAll(".product__button--buy");
   var popupAddToCartClose = popupAddToCart.querySelector(".popup-close");
   var popupAddToCartContinue = popupAddToCart.querySelector(".cart-continue");
+  var markerCart = document.querySelector(".header__button-cart");
+  var counterCart = document.querySelector(".header__button-cart span");
+  var buttonsAddBookmark = document.querySelectorAll(".product__button--bookmark");
+  var counterBookmarks = document.querySelector(".header__button-bookmarks span");
 
   for (var i = 0; i < buttonsAddToCart.length; i++) {
     buttonsAddToCart[i].addEventListener("click", function (evt) {
       evt.preventDefault();
       popupAddToCart.removeAttribute("hidden");
       popupAddToCart.classList.add("popup-show");
+      markerCart.classList.add("header__button--red");
+      counterCart.textContent = 1;
+    });
+  }
+
+  for (var i = 0; i < buttonsAddBookmark.length; i++) {
+    buttonsAddBookmark[i].addEventListener("click", function (evt) {
+      evt.preventDefault();
+      counterBookmarks.textContent = 1;
     });
   }
 
