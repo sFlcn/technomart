@@ -2336,7 +2336,7 @@ img {
 
   background-color: #9e8f80;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
 
   overflow: hidden;

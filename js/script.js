@@ -225,3 +225,78 @@ if (sliderService) {
     document.activeElement.blur()
   });
 }
+
+
+// Промо-слайдер
+
+var slider = document.querySelector(".pr-slider");
+if (slider) {
+  var slides = slider.querySelectorAll(".pr-slide");
+  var marker = slider.querySelectorAll(".pr-slider__markers-item");
+  var next = slider.querySelector(".pr-slider__button--next");
+  var previous = slider.querySelector(".pr-slider__button--previous");
+  var currentSlideIndex = 1;
+
+  next.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    nextSlide();
+  });
+
+  previous.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    previousSlide();
+  });
+
+  for (var index = 0; index < marker.length; index++) {
+    marker[index].addEventListener("click", clickHandler.bind(null, index));
+  }
+
+  function clickHandler(index, evt) {
+    evt.preventDefault();
+    var isCurrent = evt.target.classList.contains("pr-slider__markers-item--current");
+    if (isCurrent) {
+      return false;
+    }
+
+    var currentMarker = slider.querySelector(".pr-slider__markers-item--current");
+    currentMarker.classList.remove("pr-slider__markers-item--current");
+    evt.target.classList.add("pr-slider__markers-item--current");
+    getSlide(index);
+  }
+
+  function getSlide(slideIndex) {
+    try {
+      slider.querySelector(".pr-slide--show").classList.remove("pr-slide--show");
+      slides[slideIndex].classList.add("pr-slide--show");
+
+      slider.querySelector(".pr-slider__markers-item--current").classList.remove("pr-slider__markers-item--current");
+      marker[slideIndex].classList.add("pr-slider__markers-item--current");
+      currentSlideIndex = slideIndex;
+    }
+    catch (e) {
+      console.log(e);
+    }
+  }
+
+  function nextSlide() {
+    if (currentSlideIndex < slides.length - 1) {
+      currentSlideIndex++;
+    }
+    else {
+      currentSlideIndex = 0;
+    }
+
+    getSlide(currentSlideIndex);
+  }
+
+  function previous_slide() {
+    if (currentSlideIndex > 0) {
+      currentSlideIndex--;
+    }
+    else {
+      currentSlideIndex = slides.length - 1;
+    }
+
+    get_slide(currentSlideIndex);
+  }
+}
