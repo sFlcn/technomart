@@ -2264,9 +2264,12 @@ img {
   margin: 0;
 }
 
-.popup--map iframe {
+.popup__iframe-map {
   position: relative;
   z-index: 2;
+
+  width: 940px;
+  height: 446px;
 
   border: none;
 }
