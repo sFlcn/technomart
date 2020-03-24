@@ -2481,7 +2481,10 @@ img {
 .serv-slider__control-list {
   position: relative;
 
-  margin: 48px 0;
+  margin-top: 48px;
+  margin-bottom: 48px;
+  margin-left: 0px;
+  margin-right: 70px;
   padding: 0;
 
   align-self: flex-start;
@@ -2552,11 +2555,14 @@ img {
 }
 
 .service-slide {
+  position: relative;
+  left: 10px;
+
   display: none;
   width: 100%;
   min-height: 321px;
 
-  margin: 0 80px;
+  margin: 0;
   padding: 10px 0;
 
   font-family: "PT Sans", Arial, sans-serif;
@@ -2597,17 +2603,17 @@ img {
 .service-slide--delivery {
   background-image: url("../img/service-delivery.png");
   background-repeat: no-repeat;
-  background-position: right 81px top 60px;
+  background-position: right 11px top 60px;
 }
 
 .service-slide--guarantee {
   background-image: url("../img/service-guarantee.png");
   background-repeat: no-repeat;
-  background-position: right 72px top 38px;
+  background-position: right 2px top 38px;
 }
 
 .service-slide--credit {
   background-image: url("../img/service-credit.png");
   background-repeat: no-repeat;
-  background-position: right 70px top 36px;
+  background-position: right 0px top 36px;
 }
