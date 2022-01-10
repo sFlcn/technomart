@@ -1,43 +1,47 @@
-# Личный проект «Техномарт»
+# Проект «Техномарт»
 
-* Студент: [Павел](https://up.htmlacademy.ru/htmlcss/27/user/997009).
-* Наставник: [Кирилл Карпов](https://htmlacademy.ru/profile/id1129019).
+Учебный проект, реализованный во время обучения на курсе [HTML Academy](https://htmlacademy.ru) по вёрстке.
 
----
+Мой первый проект. Разрабатывался с помощью редактора *Atom* и *Chrome DevTools*, из дополнительных инструментов только обучающие материалы и онлайн-сервисы для валидации, минификации, автопрефиксер, squoosh, etc. Использовался normalize.css. Разметка по БЭМ и минимум js-кода. После окончания курса проект не дорабатывался.
+Публикация на [GitHub Pages](https://sflcn.github.io/technomart/).
 
-_Не удаляйте и не обращайте внимание на файлы:_<br>
-_`.editorconfig`, `.gitattributes`, `.gitignore`, `Contributing.md`, `Readme.md`._
-
----
-
-### Памятка
-
-#### 1. Зарегистрируйтесь на Гитхабе
-
-Если у вас ещё нет аккаунта на [github.com](https://github.com/join), скорее зарегистрируйтесь.
-
-#### 2. Создайте форк
-
-[Откройте мастер-репозиторий](https://github.com/htmlacademy-htmlcss/997009-technomart-27) и нажмите кнопку «Fork» в правом верхнем углу. Репозиторий из Академии скопируется в ваш аккаунт.
-
-<img width="769" alt="" src="https://user-images.githubusercontent.com/10909/29037784-cf833fec-7bad-11e7-8eec-dfe32aac11b1.jpg">
-
-Получится вот так:
-
-<img width="769" alt="" src="https://user-images.githubusercontent.com/10909/29037785-d1363f60-7bad-11e7-99da-f02a2f996a01.jpg">
-
-#### 3. Клонируйте репозиторий на свой компьютер
-
-Будьте внимательны: нужно клонировать свой репозиторий (форк), а не репозиторий Академии. Нажмите кнопку «Clone or download», а затем «Open in Desktop», чтобы клонировать репозиторий через программу [GitHub Desktop](https://desktop.github.com):
-
-<img width="769" alt="" src="https://user-images.githubusercontent.com/10909/29037788-d26a3558-7bad-11e7-9d08-2f9f0f6e467a.jpg">
-
-Программа клонирует репозиторий на ваш компьютер и подготовит всё необходимое для старта работы.
-
-#### 4. Начинайте обучение!
+![html](https://img.shields.io/badge/html-informational?style=flat&logo=HTML5&logoColor=e34f26&color=d3d3d3)
+![css](https://img.shields.io/badge/css-informational?style=flat&logo=CSS3&logoColor=1572b6&color=d3d3d3)
+<!-- ![JavaScript](https://img.shields.io/badge/JavaScript-informational?style=flat&logo=JavaScript&logoColor=f7df1e&color=d3d3d3) -->
 
 ---
 
-<a href="https://htmlacademy.ru/intensive/htmlcss"><img align="left" width="50" height="50" alt="HTML Academy" src="https://up.htmlacademy.ru/static/img/intensive/htmlcss/logo-for-github-2.png"></a>
+## Разработка
 
-Репозиторий создан для обучения на профессиональном онлайн‑курсе «[HTML и CSS, уровень 1](https://htmlacademy.ru/intensive/htmlcss)» от [HTML Academy](https://htmlacademy.ru).
+Все файлы в корне проекта:
+
+- technomart/
+  - css/
+  - img/
+  - js/
+  - index.html
+  - catalog.html
+
+## Техническое задание
+
+### Общие требования
+
+1. Стандарты вёрстки: **HTML5, CSS3, прогрессивное улучшение**.
+2. Сетка: **определена в макете**.
+3. Адаптивность сетки: *нет*.
+4. Используемые фреймворки: *нет*.
+5. Кроссбраузерность: **Chrome, Firefox, Safari, Edge, Internet Explorer 11**.
+6. Типографика: *частично определена в макете (прочее — на усмотрение разработчика)*.
+7. Используемые шрифты: *Cuprum, PT Sans*.
+
+- Разметка семантическая.
+
+### Дизайн
+
+- [Видео-обзор проекта на youtube](https://www.youtube.com/watch?v=_mxp5wiOFyE):
+
+  [![ссылка на youtube](https://img.youtube.com/vi/_mxp5wiOFyE/0.jpg)](https://www.youtube.com/watch?v=_mxp5wiOFyE)
+
+---
+
+Репозиторий создан в рамках обучения на профессиональном онлайн‑курсе «[HTML и CSS, уровень 1](https://htmlacademy.ru/intensive/htmlcss)» от [HTML Academy](https://htmlacademy.ru).
