@@ -2036,6 +2036,7 @@ a[href="##"] {
 /* popups */
 
 .popup {
+  display: none;
   position: relative;
 
   width: 620px;
@@ -2302,7 +2303,8 @@ a[href="##"] {
   }
 }
 
-.popup-show {
+.popup--show {
+  display: block;
   animation: bounce 0.6s;
 }
 

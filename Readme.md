@@ -2,12 +2,13 @@
 
 Учебный проект, реализованный во время обучения на курсе [HTML Academy](https://htmlacademy.ru) по вёрстке.
 
-Мой первый проект. Разрабатывался с помощью редактора *Atom* и *Chrome DevTools*, из дополнительных инструментов только обучающие материалы и онлайн-сервисы для валидации, минификации, автопрефиксер, squoosh, etc. Использовался normalize.css. Разметка по БЭМ и минимум js-кода. После окончания курса проект не дорабатывался.
+Мой первый проект. Разрабатывался с помощью редактора *Atom* и *Chrome DevTools*, из дополнительных инструментов только обучающие материалы и онлайн-сервисы для валидации, минификации, автопрефиксер, squoosh, etc. Использован normalize.css. После окончания курса ~~проект не дорабатывался~~ был немного обновлён JavaScript.
+
 Публикация на [GitHub Pages](https://sflcn.github.io/technomart/).
 
 ![html](https://img.shields.io/badge/html-informational?style=flat&logo=HTML5&logoColor=e34f26&color=d3d3d3)
 ![css](https://img.shields.io/badge/css-informational?style=flat&logo=CSS3&logoColor=1572b6&color=d3d3d3)
-<!-- ![JavaScript](https://img.shields.io/badge/JavaScript-informational?style=flat&logo=JavaScript&logoColor=f7df1e&color=d3d3d3) -->
+![JavaScript](https://img.shields.io/badge/JavaScript-informational?style=flat&logo=JavaScript&logoColor=f7df1e&color=d3d3d3)
 
 ---
 
