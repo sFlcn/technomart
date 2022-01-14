@@ -1,5 +1,10 @@
 # Проект «Техномарт»
 
+![GitHub last commit](https://img.shields.io/github/last-commit/sFlcn/technomart?logo=git)
+
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/sFlcn/technomart)
+![GitHub repo size](https://img.shields.io/github/repo-size/sFlcn/technomart)
+
 Учебный проект, реализованный во время обучения на курсе [HTML Academy](https://htmlacademy.ru) по вёрстке.
 
 Мой первый проект. Разрабатывался с помощью редактора *Atom* и *Chrome DevTools*, из дополнительных инструментов только обучающие материалы и онлайн-сервисы для валидации, минификации, автопрефиксер, squoosh, etc. Использован normalize.css. После окончания курса ~~проект не дорабатывался~~ был немного обновлён JavaScript.
