@@ -174,80 +174,54 @@ if (popupAddToCart && markerCart) {
 
 // Логин
 
-if (document.querySelector('.login-panel')) {
-  var buttonUserEnter = document.querySelector('.login-panel__enter');
-  var buttonUserReg = document.querySelector('.login-panel__registration');
-  var buttonUserName = document.querySelector('.login-panel__user-name');
-  var buttonUserExit = document.querySelector('.login-panel__user-logout');
-  var buttonUserOrders = document.querySelector('.login-panel__user-orders');
-  var buttonUserProfile = document.querySelector('.login-panel__user-profile');
+const loginPanel = document.querySelector('.login-panel');
 
-  buttonUserEnter.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    buttonUserEnter.classList.add('login-panel__item--hidden');
-    buttonUserReg.classList.add('login-panel__item--hidden');
-    buttonUserName.classList.remove('login-panel__item--hidden');
-    buttonUserExit.classList.remove('login-panel__item--hidden');
-    buttonUserOrders.classList.remove('login-panel__item--hidden');
-    buttonUserProfile.classList.remove('login-panel__item--hidden');
-  });
-  buttonUserExit.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    buttonUserEnter.classList.remove('login-panel__item--hidden');
-    buttonUserReg.classList.remove('login-panel__item--hidden');
-    buttonUserName.classList.add('login-panel__item--hidden');
-    buttonUserExit.classList.add('login-panel__item--hidden');
-    buttonUserOrders.classList.add('login-panel__item--hidden');
-    buttonUserProfile.classList.add('login-panel__item--hidden');
-  });
+const onLoginPanelClick = (evt) => {
+  const loginButtonsLists = loginPanel.querySelectorAll('.login-panel__list');
+  const loginButton = evt.target.closest('.login-panel__enter a');
+  const logoutButton = evt.target.closest('.login-panel__user-logout a');
 
+  if (loginButton || logoutButton) {
+    evt.preventDefault();
+    loginButtonsLists.forEach((element) => element.classList.toggle('login-panel__list--hidden'));
+  }
+}
+
+if (loginPanel) {
+  loginPanel.addEventListener('click', onLoginPanelClick);
 }
 
 // Слайдер сервисов
 
-var sliderService = document.querySelector('.serv-slider');
-if (sliderService) {
-  var buttonServDelivery = sliderService.querySelector('[name=serv-slider__button--delivery]');
-  var buttonServGuarantee = sliderService.querySelector('[name=serv-slider__button--guarantee]');
-  var buttonServCredit = sliderService.querySelector('[name=serv-slider__button--credit]');
-  var slideServDelivery = sliderService.querySelector('.service-slide--delivery');
-  var slideServGuarantee = sliderService.querySelector('.service-slide--guarantee');
-  var slideServCredit = sliderService.querySelector('.service-slide--credit');
+const sliderService = document.querySelector('.serv-slider');
 
-  buttonServDelivery.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    buttonServDelivery.classList.add('serv-slider__button--active');
-    slideServDelivery.classList.add('service-slide--active');
-    buttonServGuarantee.classList.remove('serv-slider__button--active');
-    slideServGuarantee.classList.remove('service-slide--active');
-    buttonServCredit.classList.remove('serv-slider__button--active');
-    slideServCredit.classList.remove('service-slide--active');
-    document.activeElement.blur()
+const onServicesClick = (evt) => {
+  const serviceSelectButtons = sliderService.querySelectorAll('.serv-slider__button');
+  const servicesSlides = sliderService.querySelectorAll('.service-slide');
+  const pressedServiseButton = evt.target.closest('.serv-slider__button');
+
+  if (!pressedServiseButton) {
+    return;
+  }
+
+  const selectedServise = pressedServiseButton.dataset.type;
+
+  serviceSelectButtons.forEach((element) => element.classList.remove('serv-slider__button--active'));
+  servicesSlides.forEach((element) => element.classList.remove('service-slide--active'));
+  pressedServiseButton.classList.add('serv-slider__button--active');
+
+  servicesSlides.forEach((element) => {
+    if (element.dataset.type === selectedServise) {
+      element.classList.add('service-slide--active');
+    }
   });
 
-  buttonServGuarantee.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    buttonServGuarantee.classList.add('serv-slider__button--active');
-    slideServGuarantee.classList.add('service-slide--active');
-    buttonServDelivery.classList.remove('serv-slider__button--active');
-    slideServDelivery.classList.remove('service-slide--active');
-    buttonServCredit.classList.remove('serv-slider__button--active');
-    slideServCredit.classList.remove('service-slide--active');
-    document.activeElement.blur()
-  });
-
-  buttonServCredit.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    buttonServCredit.classList.add('serv-slider__button--active');
-    slideServCredit.classList.add('service-slide--active');
-    buttonServDelivery.classList.remove('serv-slider__button--active');
-    slideServDelivery.classList.remove('service-slide--active');
-    buttonServGuarantee.classList.remove('serv-slider__button--active');
-    slideServGuarantee.classList.remove('service-slide--active');
-    document.activeElement.blur()
-  });
+  document.activeElement.blur();
 }
 
+if (sliderService) {
+  sliderService.addEventListener('click', onServicesClick);
+}
 
 // Промо-слайдер
 

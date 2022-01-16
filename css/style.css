@@ -428,6 +428,10 @@ a[href="##"] {
   list-style: none;
 }
 
+.login-panel__list--hidden {
+  display: none;
+}
+
 .login-panel__item {
   margin-bottom: 5px;
 }
@@ -598,10 +602,6 @@ a[href="##"] {
 
 .login-panel__user-logout:active g {
   fill: #c5c5c5;
-}
-
-.login-panel__item--hidden {
-  display: none;
 }
 
 .site-nav__list {

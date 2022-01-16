@@ -42,20 +42,22 @@
                 </a>
               </li>
               <li class="login-panel__item login-panel__registration"><a href="##" onclick="return false">Регистрация</a></li>
-              <li class="login-panel__item login-panel__user-name login-panel__item--hidden">
+            </ul>
+            <ul class="login-panel__list login-panel__list--hidden">
+              <li class="login-panel__item login-panel__user-name">
                 <a class="login-panel__user-name-link" href="##" onclick="return false">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18"><path fill="#c5c5c5" d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"/></svg>
                   <span>Равшан Джамшутович</span>
                 </a>
               </li>
-              <li class="login-panel__item login-panel__user-logout login-panel__item--hidden">
+              <li class="login-panel__item login-panel__user-logout">
                 <a href="./logout.html">
                   <div class="visuallyhidden">выход</div>
                   <svg height="17" viewBox="0 0 21 17" width="21" xmlns="http://www.w3.org/2000/svg"><g fill="#c5c5c5"><path d="m21 8.5-8.875-8.5v6h-6v5h6v6z"/><path d="m3.106 13.952v-10.904c.018-.376.171-1.057 1.01-1.057h5.027v-1.991h-5.027c-2.178 0-3.004 1.81-3.029 3.027v10.946c.025 1.216.851 3.027 3.029 3.027h5.027v-1.99h-5.027c-.839 0-.992-.683-1.01-1.058z"/></g></svg>
                 </a>
               </li>
-              <li class="login-panel__item login-panel__user-orders login-panel__item--hidden"><a href="##" onclick="return false">Мои заказы</a></li>
-              <li class="login-panel__item login-panel__user-profile login-panel__item--hidden"><a href="##" onclick="return false">Личный кабинет</a></li>
+              <li class="login-panel__item login-panel__user-orders"><a href="##" onclick="return false">Мои заказы</a></li>
+              <li class="login-panel__item login-panel__user-profile"><a href="##" onclick="return false">Личный кабинет</a></li>
             </ul>
           </div>
         </div>
@@ -248,27 +250,27 @@
           <div class="service__slider serv-slider">
             <ul class="serv-slider__control-list">
               <li class="serv-slider__control-item">
-                <button class="serv-slider__button serv-slider__button--active" type="button" name="serv-slider__button--delivery">Доставка</button>
+                <button class="serv-slider__button serv-slider__button--active" type="button" name="serv-slider__button--delivery" data-type="delivery">Доставка</button>
               </li>
               <li class="serv-slider__control-item">
-                <button class="serv-slider__button" type="button" name="serv-slider__button--guarantee">Гарантия</button>
+                <button class="serv-slider__button" type="button" name="serv-slider__button--guarantee" data-type="guarantee">Гарантия</button>
               </li>
               <li class="serv-slider__control-item">
-                <button class="serv-slider__button" type="button" name="serv-slider__button--credit">Кредит</button>
+                <button class="serv-slider__button" type="button" name="serv-slider__button--credit" data-type="credit">Кредит</button>
               </li>
             </ul>
             <ul class="serv-slider__list">
-              <li class="serv-slider__item service-slide service-slide--delivery service-slide--active">
+              <li class="serv-slider__item service-slide service-slide--delivery service-slide--active" data-type="delivery">
                 <h3 class="service-slide__title">Доставка</h3>
                 <p class="service-slide__text">Мы с удовольствием доставим ваш товар прямо <br>к вашему подъезду совершенно бесплатно!</p>
                 <p class="service-slide__text">Ведь мы неплохо заработаем, <br>поднимая его на ваш этаж!</p>
               </li>
-              <li class="serv-slider__item service-slide service-slide--guarantee">
+              <li class="serv-slider__item service-slide service-slide--guarantee" data-type="guarantee">
                 <h3 class="service-slide__title">Гарантия</h3>
                 <p class="service-slide__text">Если купленный у нас товар поломается или заискрит, <br>а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.</p>
                 <p class="service-slide__text">Дом уж восстановите как-нибудь сами.</p>
               </li>
-              <li class="serv-slider__item service-slide service-slide--credit">
+              <li class="serv-slider__item service-slide service-slide--credit" data-type="credit">
                 <h3 class="service-slide__title">Кредит</h3>
                 <p class="service-slide__text">Залезть в долговую яму стало проще! <br>Кредитные консультанты придут вам на помощь.</p>
                 <a href="##" onclick="return false" class="service-slide__link big-button big-button--red">отправить заявку</a>
