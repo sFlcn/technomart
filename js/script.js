@@ -225,74 +225,65 @@ if (sliderService) {
 
 // Промо-слайдер
 
-var slider = document.querySelector('.pr-slider');
+const slider = document.querySelector('.pr-slider');
+
 if (slider) {
-  var slides = slider.querySelectorAll('.pr-slide');
-  var marker = slider.querySelectorAll('.pr-slider__markers-item');
-  var next = slider.querySelector('.pr-slider__button--next');
-  var previous = slider.querySelector('.pr-slider__button--previous');
-  var currentSlideIndex = 1;
+  const slides = slider.querySelectorAll('.pr-slide');
+  const markersList = slider.querySelector('.pr-slider__markers-list');
+  const markers = markersList.querySelectorAll('.pr-slider__markers-item');
+  const next = slider.querySelector('.pr-slider__button--next');
+  const previous = slider.querySelector('.pr-slider__button--previous');
+  let currentSlideIndex = 1;
 
-  next.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    nextSlide();
-  });
-
-  previous.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    previousSlide();
-  });
-
-  for (var index = 0; index < marker.length; index++) {
-    marker[index].addEventListener('click', clickHandler.bind(null, index));
+  const updateMarkers = (currentSlideIndex) => {
+    markers.forEach(element => {
+      element.classList.remove('pr-slider__markers-item--current');
+    });
+    markers[currentSlideIndex].classList.add('pr-slider__markers-item--current');
   }
 
-  function clickHandler(index, evt) {
+  const onMarkerClick = (evt) => {
+    const marker = evt.target.closest('.pr-slider__markers-item');
+    if (!marker || marker.classList.contains('pr-slider__markers-item--current')) {
+      return;
+    }
+
     evt.preventDefault();
-    var isCurrent = evt.target.classList.contains('pr-slider__markers-item--current');
-    if (isCurrent) {
-      return false;
-    }
-
-    var currentMarker = slider.querySelector('.pr-slider__markers-item--current');
-    currentMarker.classList.remove('pr-slider__markers-item--current');
-    evt.target.classList.add('pr-slider__markers-item--current');
-    getSlide(index);
+    currentSlideIndex = +marker.dataset['markern'];
+    updateMarkers(currentSlideIndex);
+    showSlide(currentSlideIndex);
   }
 
-  function getSlide(slideIndex) {
-    try {
-      slider.querySelector('.pr-slide--show').classList.remove('pr-slide--show');
-      slides[slideIndex].classList.add('pr-slide--show');
-
-      slider.querySelector('.pr-slider__markers-item--current').classList.remove('pr-slider__markers-item--current');
-      marker[slideIndex].classList.add('pr-slider__markers-item--current');
-      currentSlideIndex = slideIndex;
-    }
-    catch (e) {
-      console.log(e);
-    }
-  }
-
-  function nextSlide() {
-    if (currentSlideIndex < slides.length - 1) {
+  const onNextClick = (evt) => {
+    evt.preventDefault();
+    if (currentSlideIndex >= slides.length - 1) {
+      currentSlideIndex = 0;
+    } else {
       currentSlideIndex++;
     }
-    else {
-      currentSlideIndex = 0;
-    }
-
-    getSlide(currentSlideIndex);
+    updateMarkers(currentSlideIndex);
+    showSlide(currentSlideIndex);
   }
 
-  function previous_slide() {
-    if (currentSlideIndex > 0) {
+  const onPrevClick = (evt) => {
+    evt.preventDefault();
+    if (currentSlideIndex <= 0) {
+      currentSlideIndex = slides.length - 1;
+    } else {
       currentSlideIndex--;
     }
-    else {
-      currentSlideIndex = slides.length - 1;
-    }
-
-    get_slide(currentSlideIndex);
+    updateMarkers(currentSlideIndex);
+    showSlide(currentSlideIndex);
   }
+
+  const showSlide = (currentSlideIndex) => {
+    slides.forEach(element => {
+      element.classList.remove('pr-slide--show');
+    });
+    slides[currentSlideIndex].classList.add('pr-slide--show');
+  }
+
+  next.addEventListener('click', onNextClick);
+  previous.addEventListener('click', onPrevClick);
+  markersList.addEventListener('click', onMarkerClick);
 }
