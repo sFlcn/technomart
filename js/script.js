@@ -12,22 +12,23 @@ try {
 
 // Pop-up
 
-const showPopup = (popupElement, popupCloseButton, popupShowCssClass = 'popup--show') => {
+function showPopup(popupElement, popupCloseButton, popupShowCssClass) {
+  popupShowCssClass = popupShowCssClass || 'popup--show';
 
-  const closePopup = () => {
+  function closePopup() {
     popupCloseButton.removeEventListener('click', closeButtonHandler);
     document.removeEventListener('keydown', escKeydownHandler);
     popupElement.classList.remove(popupShowCssClass);
   };
 
-  const escKeydownHandler = (evt) => {
+  function escKeydownHandler(evt) {
     if (evt.key === 'Escape' || evt.key === 'Esc') {
       evt.preventDefault();
       closePopup();
     }
   };
 
-  const closeButtonHandler = (evt) => {
+  function closeButtonHandler(evt) {
     evt.preventDefault();
     closePopup();
   };
@@ -49,7 +50,7 @@ if (buttonWriteUs && popupWriteUs) {
   const popupWriteUsEmailField = popupWriteUs.querySelector('[name=message-email]');
   const popupWriteUsMessage = popupWriteUs.querySelector('[name=message]');
 
-  const onWriteUsClick = (evt) => {
+  function onWriteUsClick(evt) {
     evt.preventDefault();
     showPopup(popupWriteUs, popupWriteUsClose);
     if (isStorageSupport) {
@@ -60,13 +61,13 @@ if (buttonWriteUs && popupWriteUs) {
     }
   };
 
-  const flashWriteUsInput = (element, cssClas = 'popup--write-us-required') => {
+  function flashWriteUsInput(element, cssClas = 'popup--write-us-required') {
     element.classList.remove(cssClas);
     element.focus();
     element.classList.add(cssClas);
   };
 
-  const onWriteUsFormSubmit = (evt) => {
+  function onWriteUsFormSubmit(evt) {
     if (!popupWriteUsNameField.value) {
       evt.preventDefault();
       flashWriteUsInput(popupWriteUsNameField);
@@ -98,7 +99,7 @@ const buttonMap = document.querySelector('.contacts__map');
 if (buttonMap && popupMap) {
   const popupMapClose = popupMap.querySelector('.popup-close');
 
-  const onbuttonMapClick = (evt) => {
+  function onbuttonMapClick(evt) {
     evt.preventDefault();
     showPopup(popupMap, popupMapClose);
   }
@@ -116,11 +117,11 @@ const counterBookmarks = document.querySelector('.header__button-bookmarks span'
 const popupAddToCartClose = document.querySelector('.popup--cart .popup-close');
 let bookmarkedProducts = [];
 
-const isBookmarked = (productItem) => {
+function isBookmarked(productItem) {
   return bookmarkedProducts.includes(productItem);
 };
 
-const onProductButtonsClick = (evt) => {
+function onProductButtonsClick(evt) {
   const productItem = evt.target.closest('.product');
   const productButtonBuy = evt.target.closest('.product__button--buy');
   const productButtonBookmark = evt.target.closest('.product__button--bookmark');
@@ -176,14 +177,14 @@ if (popupAddToCart && markerCart) {
 
 const loginPanel = document.querySelector('.login-panel');
 
-const onLoginPanelClick = (evt) => {
+function onLoginPanelClick(evt) {
   const loginButtonsLists = loginPanel.querySelectorAll('.login-panel__list');
   const loginButton = evt.target.closest('.login-panel__enter a');
   const logoutButton = evt.target.closest('.login-panel__user-logout a');
 
   if (loginButton || logoutButton) {
     evt.preventDefault();
-    loginButtonsLists.forEach((element) => element.classList.toggle('login-panel__list--hidden'));
+    loginButtonsLists.forEach(function(element) {element.classList.toggle('login-panel__list--hidden')});
   }
 }
 
@@ -195,7 +196,7 @@ if (loginPanel) {
 
 const sliderService = document.querySelector('.serv-slider');
 
-const onServicesClick = (evt) => {
+function onServicesClick(evt) {
   const serviceSelectButtons = sliderService.querySelectorAll('.serv-slider__button');
   const servicesSlides = sliderService.querySelectorAll('.service-slide');
   const pressedServiseButton = evt.target.closest('.serv-slider__button');
@@ -206,11 +207,11 @@ const onServicesClick = (evt) => {
 
   const selectedServise = pressedServiseButton.dataset.type;
 
-  serviceSelectButtons.forEach((element) => element.classList.remove('serv-slider__button--active'));
-  servicesSlides.forEach((element) => element.classList.remove('service-slide--active'));
+  serviceSelectButtons.forEach(function(element) {element.classList.remove('serv-slider__button--active')});
+  servicesSlides.forEach(function(element) {element.classList.remove('service-slide--active')});
   pressedServiseButton.classList.add('serv-slider__button--active');
 
-  servicesSlides.forEach((element) => {
+  servicesSlides.forEach(function(element) {
     if (element.dataset.type === selectedServise) {
       element.classList.add('service-slide--active');
     }
@@ -235,14 +236,14 @@ if (slider) {
   const previous = slider.querySelector('.pr-slider__button--previous');
   let currentSlideIndex = 1;
 
-  const updateMarkers = (currentSlideIndex) => {
-    markers.forEach(element => {
+  function updateMarkers(currentSlideIndex) {
+    markers.forEach(function(element) {
       element.classList.remove('pr-slider__markers-item--current');
     });
     markers[currentSlideIndex].classList.add('pr-slider__markers-item--current');
   }
 
-  const onMarkerClick = (evt) => {
+  function onMarkerClick(evt) {
     const marker = evt.target.closest('.pr-slider__markers-item');
     if (!marker || marker.classList.contains('pr-slider__markers-item--current')) {
       return;
@@ -254,7 +255,7 @@ if (slider) {
     showSlide(currentSlideIndex);
   }
 
-  const onNextClick = (evt) => {
+  function onNextClick(evt) {
     evt.preventDefault();
     if (currentSlideIndex >= slides.length - 1) {
       currentSlideIndex = 0;
@@ -265,7 +266,7 @@ if (slider) {
     showSlide(currentSlideIndex);
   }
 
-  const onPrevClick = (evt) => {
+  function onPrevClick(evt) {
     evt.preventDefault();
     if (currentSlideIndex <= 0) {
       currentSlideIndex = slides.length - 1;
@@ -276,8 +277,8 @@ if (slider) {
     showSlide(currentSlideIndex);
   }
 
-  const showSlide = (currentSlideIndex) => {
-    slides.forEach(element => {
+  function showSlide(currentSlideIndex) {
+    slides.forEach(function(element) {
       element.classList.remove('pr-slide--show');
     });
     slides[currentSlideIndex].classList.add('pr-slide--show');
