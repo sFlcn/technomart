@@ -10,6 +10,32 @@ try {
   isStorageSupport = false;
 };
 
+// полифил для Element.closest()
+
+function isMatches(element, css) {
+  if (!Element.prototype.matches) {
+	  return element.msMatchesSelector(css);
+  }
+  return element.matches(css);
+}
+
+function getClosest(element, css) {
+  if (Element.prototype.closest) {
+    return element.closest(css)
+  } else {
+	let closestElement = element;
+
+    while (closestElement) {
+      if (isMatches(closestElement, css)) {
+        return closestElement;
+      } else {
+        closestElement = closestElement.parentElement;
+      }
+    }
+    return null;
+  }
+}
+
 // Pop-up
 
 function showPopup(popupElement, popupCloseButton, popupShowCssClass) {
@@ -61,7 +87,9 @@ if (buttonWriteUs && popupWriteUs) {
     }
   };
 
-  function flashWriteUsInput(element, cssClas = 'popup--write-us-required') {
+  function flashWriteUsInput(element, cssClas) {
+    cssClas = cssClas || 'popup--write-us-required';
+
     element.classList.remove(cssClas);
     element.focus();
     element.classList.add(cssClas);
@@ -110,55 +138,59 @@ if (buttonMap && popupMap) {
 // Корзина и закладки
 
 const popupAddToCart = document.querySelector('.popup--cart');
+const popupAddToCartClose = document.querySelector('.popup--cart .popup-close');
 const productsList = document.querySelector('.products__list');
 const markerCart = document.querySelector('.header__button-cart');
 const counterCart = document.querySelector('.header__button-cart span');
 const counterBookmarks = document.querySelector('.header__button-bookmarks span');
-const popupAddToCartClose = document.querySelector('.popup--cart .popup-close');
-let bookmarkedProducts = [];
-
-function isBookmarked(productItem) {
-  return bookmarkedProducts.includes(productItem);
-};
-
-function onProductButtonsClick(evt) {
-  const productItem = evt.target.closest('.product');
-  const productButtonBuy = evt.target.closest('.product__button--buy');
-  const productButtonBookmark = evt.target.closest('.product__button--bookmark');
-
-  if (productButtonBuy) {
-    evt.preventDefault();
-    showPopup(popupAddToCart, popupAddToCartClose);
-    if (isStorageSupport) {
-      let boughtCount = +localStorage.getItem('boughtProductsCount');
-      localStorage.setItem('boughtProductsCount', ++boughtCount);
-      counterCart.textContent = boughtCount;
-    } else {
-      counterCart.textContent ++;
-    }
-    markerCart.classList.add('header__button--red');
-    return;
-  }
-
-  if (productButtonBookmark) {
-    evt.preventDefault();
-    if (isBookmarked(productItem)) {
-      return;
-    }
-    bookmarkedProducts.push(productItem);
-    if (isStorageSupport) {
-      let bookmarkedCount = +localStorage.getItem('bookmarkedProductsCount');
-      localStorage.setItem('bookmarkedProductsCount', ++bookmarkedCount);
-      counterBookmarks.textContent = bookmarkedCount;
-    } else {
-      counterBookmarks.textContent++;
-    }
-    return;
-  }
-};
 
 if (popupAddToCart && markerCart) {
-  productsList.addEventListener('click', onProductButtonsClick);
+  let bookmarkedProducts = [];
+
+  function isBookmarked(productItem) {
+    for (let i = 0; i < bookmarkedProducts.length; i++) {
+      if (bookmarkedProducts[i] === productItem) {
+        return true;
+      }
+    }
+    return false;
+  };
+
+  function onProductButtonsClick(evt) {
+    const productItem = getClosest(evt.target, '.product');
+    const productButtonBuy = getClosest(evt.target, '.product__button--buy');
+    const productButtonBookmark = getClosest(evt.target, '.product__button--bookmark');
+
+    if (productButtonBuy) {
+      evt.preventDefault();
+      showPopup(popupAddToCart, popupAddToCartClose);
+      if (isStorageSupport) {
+        let boughtCount = +localStorage.getItem('boughtProductsCount');
+        localStorage.setItem('boughtProductsCount', ++boughtCount);
+        counterCart.textContent = boughtCount;
+      } else {
+        counterCart.textContent ++;
+      }
+      markerCart.classList.add('header__button--red');
+      return;
+    }
+
+    if (productButtonBookmark) {
+      evt.preventDefault();
+      if (isBookmarked(productItem)) {
+        return;
+      }
+      bookmarkedProducts.push(productItem);
+      if (isStorageSupport) {
+        let bookmarkedCount = +localStorage.getItem('bookmarkedProductsCount');
+        localStorage.setItem('bookmarkedProductsCount', ++bookmarkedCount);
+        counterBookmarks.textContent = bookmarkedCount;
+      } else {
+        counterBookmarks.textContent++;
+      }
+      return;
+    }
+  };
 
   if (isStorageSupport) {
     const boughtCount = +localStorage.getItem('boughtProductsCount');
@@ -171,57 +203,65 @@ if (popupAddToCart && markerCart) {
       markerCart.classList.add('header__button--red');
     }
   }
+
+  productsList.addEventListener('click', onProductButtonsClick);
 }
 
 // Логин
 
-const loginPanel = document.querySelector('.login-panel');
+const loginPanelEnter = document.querySelector('.login-panel__enter-link');
+const loginPanelExit = document.querySelector('.login-panel__user-logout a');
 
-function onLoginPanelClick(evt) {
-  const loginButtonsLists = loginPanel.querySelectorAll('.login-panel__list');
-  const loginButton = evt.target.closest('.login-panel__enter a');
-  const logoutButton = evt.target.closest('.login-panel__user-logout a');
+if (loginPanelEnter && loginPanelExit) {
+  const loginButtonsLists = document.querySelectorAll('.login-panel__list');
 
-  if (loginButton || logoutButton) {
+  function onLoginPanelClick(evt) {
     evt.preventDefault();
-    loginButtonsLists.forEach(function(element) {element.classList.toggle('login-panel__list--hidden')});
+    for (let i = 0; i < loginButtonsLists.length; i++) {
+      loginButtonsLists[i].classList.toggle('login-panel__list--hidden');
+    }
   }
-}
 
-if (loginPanel) {
-  loginPanel.addEventListener('click', onLoginPanelClick);
+  loginPanelEnter.addEventListener('click', onLoginPanelClick);
+  loginPanelExit.addEventListener('click', onLoginPanelClick);
 }
 
 // Слайдер сервисов
 
 const sliderService = document.querySelector('.serv-slider');
 
-function onServicesClick(evt) {
-  const serviceSelectButtons = sliderService.querySelectorAll('.serv-slider__button');
+if (sliderService) {
+  const serviceButtons = sliderService.querySelectorAll('.serv-slider__button');
   const servicesSlides = sliderService.querySelectorAll('.service-slide');
-  const pressedServiseButton = evt.target.closest('.serv-slider__button');
 
-  if (!pressedServiseButton) {
-    return;
+  function onServiceButtonCLick(evt) {
+    evt.preventDefault();
+    const selectedServise = evt.target.dataset.type;
+    let selectedServiseSlide;
+    let selectedServiseButton;
+
+    for (let i = 0; i < serviceButtons.length; i++) {
+      serviceButtons[i].classList.remove('serv-slider__button--active')
+      servicesSlides[i].classList.remove('service-slide--active')
+
+      if (servicesSlides[i].dataset.type === selectedServise) {
+        selectedServiseSlide = servicesSlides[i];
+      }
+
+      if (serviceButtons[i].dataset.type === selectedServise) {
+        selectedServiseButton = serviceButtons[i];
+      }
+    }
+
+    selectedServiseSlide.classList.add('service-slide--active');
+    selectedServiseButton.classList.add('serv-slider__button--active');
+    document.activeElement.blur();
   }
 
-  const selectedServise = pressedServiseButton.dataset.type;
+  for (let i = 0; i < serviceButtons.length; i++) {
+    serviceButtons[i].addEventListener('click', onServiceButtonCLick);
+  }
 
-  serviceSelectButtons.forEach(function(element) {element.classList.remove('serv-slider__button--active')});
-  servicesSlides.forEach(function(element) {element.classList.remove('service-slide--active')});
-  pressedServiseButton.classList.add('serv-slider__button--active');
-
-  servicesSlides.forEach(function(element) {
-    if (element.dataset.type === selectedServise) {
-      element.classList.add('service-slide--active');
-    }
-  });
-
-  document.activeElement.blur();
-}
-
-if (sliderService) {
-  sliderService.addEventListener('click', onServicesClick);
 }
 
 // Промо-слайдер
@@ -237,14 +277,14 @@ if (slider) {
   let currentSlideIndex = 1;
 
   function updateMarkers(currentSlideIndex) {
-    markers.forEach(function(element) {
-      element.classList.remove('pr-slider__markers-item--current');
-    });
+    for (let i = 0; i < markers.length; i++) {
+      markers[i].classList.remove('pr-slider__markers-item--current');
+    }
     markers[currentSlideIndex].classList.add('pr-slider__markers-item--current');
   }
 
   function onMarkerClick(evt) {
-    const marker = evt.target.closest('.pr-slider__markers-item');
+    const marker = getClosest(evt.target, '.pr-slider__markers-item');
     if (!marker || marker.classList.contains('pr-slider__markers-item--current')) {
       return;
     }
@@ -278,9 +318,9 @@ if (slider) {
   }
 
   function showSlide(currentSlideIndex) {
-    slides.forEach(function(element) {
-      element.classList.remove('pr-slide--show');
-    });
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].classList.remove('pr-slide--show');
+    }
     slides[currentSlideIndex].classList.add('pr-slide--show');
   }
 

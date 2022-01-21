@@ -520,6 +520,12 @@ a[href="##"] {
 }
 
 .login-panel__user-logout a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.login-panel__user-logout svg {
   position: relative;
   left: 9px;
   top: 14px;
